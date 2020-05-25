@@ -18,7 +18,9 @@ public class MagazineParameterException extends Exception {
         char[] typeHat = new char[1];
         while (true){
             if(sportMagazine.getCodeOfHat().charAt(0) == sportMagazine.getCodes(0)
-                    || sportMagazine.getCodeOfHat().charAt(0) == sportMagazine.getCodes(1)) break;
+                    || sportMagazine.getCodeOfHat().charAt(0) == sportMagazine.getCodes(1)){
+                break;
+            }
             else {
                 try {
                     throw new MagazineParameterException(message);

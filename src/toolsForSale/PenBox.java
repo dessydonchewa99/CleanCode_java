@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class PenBox {
     public final static int SELL_SIZE_BOX = 100;
+    public final static int INITIAL_CAPACITY = 20;
 
     private ArrayList<Pen> boxOfPens;
 
@@ -48,7 +49,7 @@ public class PenBox {
     }
 
     public void showOfferedPens() {
-        ArrayList<Pen> listOfPens = new ArrayList<>(20);
+        ArrayList<Pen> listOfPens = new ArrayList<>(INITIAL_CAPACITY);
 
         for(PenColors currentColor : PenColors.values()){
             for(PenTypes currentType : PenTypes.values()){

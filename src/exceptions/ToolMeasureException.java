@@ -12,9 +12,10 @@ public class ToolMeasureException extends Exception {
         this("WRONG MEASURE");
     }
 
-    public void protractorValidation(ProtractorTool protractorTool, String message){
-        if(protractorTool.getToolMeasure() == GeometryToolMeasure.DEGREE ||
-                protractorTool.getToolMeasure() == GeometryToolMeasure.RADIAN) return;
+    public void protractorValidation(ProtractorTool tool, String message){
+        if(tool.getToolMeasure() == GeometryToolMeasure.DEGREE || tool.getToolMeasure() == GeometryToolMeasure.RADIAN) {
+            return;
+        }
 
         Scanner scanner = new Scanner(System.in);
 
@@ -22,10 +23,10 @@ public class ToolMeasureException extends Exception {
             String input = scanner.nextLine();
 
             if(input.equals("DEGREE")){
-                protractorTool.setToolMeasure(GeometryToolMeasure.DEGREE);
+                tool.setToolMeasure(GeometryToolMeasure.DEGREE);
                 break;
             }else if (input.equals("RADIAN")){
-                protractorTool.setToolMeasure(GeometryToolMeasure.RADIAN);
+                tool.setToolMeasure(GeometryToolMeasure.RADIAN);
                 break;
             }else {
                 try {
@@ -38,9 +39,10 @@ public class ToolMeasureException extends Exception {
         }
     }
 
-    public void rulerValidation(RulerTool rulerTool, String message){
-        if(rulerTool.getToolMeasure() == GeometryToolMeasure.CENTIMETER ||
-                rulerTool.getToolMeasure() == GeometryToolMeasure.INCH) return;
+    public void rulerValidation(RulerTool tool, String message){
+        if(tool.getToolMeasure() == GeometryToolMeasure.CENTIMETER || tool.getToolMeasure() == GeometryToolMeasure.INCH){
+            return;
+        }
 
         Scanner scanner = new Scanner(System.in);
 
@@ -48,10 +50,10 @@ public class ToolMeasureException extends Exception {
             String input = scanner.nextLine();
 
             if(input.equals("CENTIMETER")){
-                rulerTool.setToolMeasure(GeometryToolMeasure.CENTIMETER);
+                tool.setToolMeasure(GeometryToolMeasure.CENTIMETER);
                 break;
             }else if (input.equals("INCH")){
-                rulerTool.setToolMeasure(GeometryToolMeasure.INCH);
+                tool.setToolMeasure(GeometryToolMeasure.INCH);
                 break;
             }else {
                 try {
@@ -64,9 +66,10 @@ public class ToolMeasureException extends Exception {
         }
     }
 
-    public void triangleValidation(TriangleTool triangleTool, String message){
-        if(triangleTool.getToolMeasure() == GeometryToolMeasure.CENTIMETER ||
-                triangleTool.getToolMeasure() == GeometryToolMeasure.INCH) return;
+    public void triangleValidation(TriangleTool tool, String message){
+        if(tool.getToolMeasure() == GeometryToolMeasure.CENTIMETER || tool.getToolMeasure() == GeometryToolMeasure.INCH) {
+            return;
+        }
 
         Scanner scanner = new Scanner(System.in);
 
@@ -74,10 +77,10 @@ public class ToolMeasureException extends Exception {
             String input = scanner.nextLine();
 
             if(input.equals("CENTIMETER")){
-                triangleTool.setToolMeasure(GeometryToolMeasure.CENTIMETER);
+                tool.setToolMeasure(GeometryToolMeasure.CENTIMETER);
                 break;
             }else if (input.equals("INCH")){
-                triangleTool.setToolMeasure(GeometryToolMeasure.INCH);
+                tool.setToolMeasure(GeometryToolMeasure.INCH);
                 break;
             }else {
                 try {

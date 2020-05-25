@@ -36,7 +36,7 @@ public class FashionMagazine extends Magazine {
     }
 
     public void setTombolaTicketDestination(String tombolaTicketDestination) {
-        this.tombolaTicketDestination = tombolaTicketDestination;
+        this.tombolaTicketDestination = tombolaTicketDestination == null ? AVAILABLE_DESTINATIONS[0] : tombolaTicketDestination;
     }
 
     public boolean getTombolaTicket() {
@@ -48,13 +48,20 @@ public class FashionMagazine extends Magazine {
     }
 
     public void searchTombolaTicket(){
-        Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(),
-                getName(), getHasPosters(), getNumberOfInterviews());
+        Magazine magazine = new Magazine();
+
+        magazine.setPricePerPage(getPricePerPage());
+        magazine.setPricePerPage(getPages());
+        magazine.setIssueInThousands(getIssueInThousands());
+        magazine.setName(getName());
+        magazine.setHasPosters(getHasPosters());
+        magazine.setNumberOfInterviews(getNumberOfInterviews());
+
         PricePerPrintEdition pricePerPrintEdition = magazine.getMagazinePrice();
 
         boolean flag = false;
         if((tombolaTicket && tombolaTicketDestination != null) || (tombolaTicket && tombolaTicketDestination != "")) {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < AVAILABLE_DESTINATIONS.length; i++) {
                 if (tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])) {
                     flag = true;
                     break;
@@ -71,12 +78,14 @@ public class FashionMagazine extends Magazine {
         }
     }
 
-    public double[] ratioDestinations(List<FashionMagazine> list){
+    public double[] ratioDestinations(List<FashionMagazine> fashionMagazines){
         int[] countDestinations = new int[AVAILABLE_DESTINATIONS.length];
-        for(int i = 0; i < list.size(); i++){
+        for(int i = 0; i < fashionMagazines.size(); i++){
             int j = 0;
             while (j!=AVAILABLE_DESTINATIONS.length){
-                if(list.get(i).tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])) countDestinations[j]++;
+                if(fashionMagazines.get(i).tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])){
+                    countDestinations[j]++;
+                }
                 j++;
             }
         }

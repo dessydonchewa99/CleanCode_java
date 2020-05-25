@@ -46,9 +46,9 @@ public class ColorfulPoster extends Poster {
             double result = printPrice.calculatePricePerEdition();
             if(sharpColors) {
                 if(order % CLIENT_NUMBER_DISCOUNT == 0) {
-                    return (result + PRICE_STICKY_POSTER)/DISCOUNT;
+                    return (result + PRICE_SHARP_COLORS)/DISCOUNT;
                 } else {
-                    return result + PRICE_STICKY_POSTER;
+                    return result + PRICE_SHARP_COLORS;
                 }
             }else {
                 if(order % CLIENT_NUMBER_DISCOUNT == 0) {
@@ -65,7 +65,7 @@ public class ColorfulPoster extends Poster {
 
         @Override
         public void printEditionInformation() {
-            System.out.printf("Sticky: %b%n\nSharp colors: %b%n", getSticky(), sharpColors);
+            System.out.printf("Sticky: %b%nSharp colors: %b%n", getSticky(), sharpColors);
         }
     }
 }

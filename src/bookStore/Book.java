@@ -59,7 +59,7 @@ public class Book extends PrintEdition {
     public List<Book> lookAllHardCovers(List<Book> bookList){
         List<Book> result = null;
         int i = 0;
-        for(Book book:bookList){
+        for(Book book : bookList){
             if(book.getHasHardcovers()) {
                 result.set(i, book);
                 i++;
@@ -70,7 +70,7 @@ public class Book extends PrintEdition {
     }
     public boolean checkAuthor(List<Book> bookList, String authorName){
         int i = 0;
-        for(Book book:bookList){
+        for(Book book : bookList){
             if(book.authorName.equals(authorName)) {
                 return true;
             }

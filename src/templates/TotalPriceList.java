@@ -13,7 +13,7 @@ public class TotalPriceList<T extends PricePerPrintEdition>{
     }
 
     public double total() {
-        for(T object:objects){
+        for(T object : objects){
             price = price + object.calculatePricePerEdition();
         }
 

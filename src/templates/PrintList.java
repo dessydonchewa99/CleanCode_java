@@ -12,7 +12,7 @@ public class PrintList<T extends PrintEditionInformation> {
     }
 
     public void printObjects() {
-        for(T object:objects){
+        for(T object : objects){
             object.printEditionInformation();
         }
     }

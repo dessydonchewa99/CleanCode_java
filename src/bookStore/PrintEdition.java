@@ -57,8 +57,7 @@ public class PrintEdition {
     }
 
     public double calculatePrintPrice() {
-        double totalPrice = pricePerPage*pages;
-        return totalPrice;
+        return pricePerPage*pages;
     }
 }
 

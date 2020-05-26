@@ -31,7 +31,7 @@ public class Newspaper extends PrintEdition{
         this.printDate = printDate;
     }
     public void setAdsNumber(int adsNumber) {
-        this.adsNumber = adsNumber < 0 ? 0 : adsNumber;
+        this.adsNumber = (adsNumber < 0) ? 0 : adsNumber;
     }
 
     public Date getPrintDate() {

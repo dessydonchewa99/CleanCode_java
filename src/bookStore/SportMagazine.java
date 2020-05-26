@@ -116,7 +116,7 @@ public class SportMagazine extends Magazine {
 
         @Override
         public void printEditionInformation() {
-            System.out.printf("Has posters: %b%nNumber of interviews: %d%nBonusHat: %b",
+            System.out.printf("Has posters: %b%nNumber of interviews: %d%nBonusHat: %b%nCode of hat: %s%n",
                     getHasPosters(), getNumberOfInterviews(), bonusHat, codeOfHat);
         }
     }

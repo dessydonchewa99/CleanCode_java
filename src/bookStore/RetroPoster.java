@@ -6,7 +6,7 @@ public class RetroPoster extends Poster {
     public static final double PRICE_EFFECT_POSTER = 3.35;
 
     private boolean specialEffect = false; //special retro effect
-    private double ratio;
+    private double ratio; //help variable, don't need in constructor
 
     public RetroPoster(){
         super(DEFAULT_PRICE_PER_PAGE, MIN_PAGES, MIN_ISSUE, null, false);

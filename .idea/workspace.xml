@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8565a462-f031-4a71-bbc2-1b4a5e5b710d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Comic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Comic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Magazine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bookStore/Newspaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Newspaper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bookStore/PrintEdition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/PrintEdition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590438340418</updated>
-      <workItem from="1590438342148" duration="7704000" />
+      <workItem from="1590438342148" duration="8230000" />
     </task>
     <servers />
   </component>

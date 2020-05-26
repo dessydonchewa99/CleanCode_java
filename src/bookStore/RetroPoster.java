@@ -33,21 +33,31 @@ public class RetroPoster extends Poster {
         return ratio;
     }
 
-    public void calculateRatio(List<RetroPoster> retroPosters){
+    public static int calculateRatio(List<RetroPoster> retroPosters){
         int countSpecial = 0;
         int countNotSpecial = 0;
         int i = 0;
-        while (!retroPosters.isEmpty()){
-            if(retroPosters.get(i).specialEffect){
-                countSpecial++;
-            }else {
-                countNotSpecial++;
-            }
+        if(retroPosters != null) {
+            while (true) {
+                if(retroPosters.isEmpty()) {
+                    break;
+                }else {
+                    if (retroPosters.get(i).specialEffect) {
+                        countSpecial++;
+                    } else {
+                        countNotSpecial++;
+                    }
+                }
 
-            i++;
+                i++;
+            }
         }
 
-        ratio =  countSpecial/countNotSpecial;
+        if (countSpecial == 0 || countNotSpecial == 0) {
+            System.out.println("Divide by zero");
+            return -1;
+        }
+        else return countSpecial/countNotSpecial;
     }
 
     private class RetroPosterPrice implements PricePerPrintEdition {

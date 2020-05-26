@@ -48,6 +48,20 @@ public class Newspaper extends PrintEdition{
         }
         return ads;
     }
+    public List<Date> afterDate(List<Newspaper> newspapers, Date date){
+        List<Date> dates = null;
+        int count = 0;
+
+        for(Newspaper newspaper : newspapers){
+            if(newspaper.printDate.compareTo(date) > 0){
+                assert dates != null;
+                dates.set(count, newspaper.printDate);
+            }
+        }
+
+        return dates;
+    }
+
     private class NewspaperPrice implements PricePerPrintEdition{
 
         @Override

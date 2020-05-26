@@ -6,7 +6,7 @@ import java.util.List;
 
 public class FashionMagazine extends Magazine {
 
-    public final String[] AVAILABLE_DESTINATIONS = {"ITALY", "GERMANY", "FRANCE", "UK", "USA"};
+    public static final String[] AVAILABLE_DESTINATIONS = {"ITALY", "GERMANY", "FRANCE", "UK", "USA"};
 
     private boolean tombolaTicket; // not every edition should have tombola tickets
     private String tombolaTicketDestination;
@@ -78,7 +78,7 @@ public class FashionMagazine extends Magazine {
         }
     }
 
-    public double[] ratioDestinations(List<FashionMagazine> fashionMagazines){
+    public static double[] ratioDestinations(List<FashionMagazine> fashionMagazines){
         int[] countDestinations = new int[AVAILABLE_DESTINATIONS.length];
         for(int i = 0; i < fashionMagazines.size(); i++){
             int j = 0;

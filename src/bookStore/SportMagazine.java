@@ -55,14 +55,14 @@ public class SportMagazine extends Magazine {
         this.bonusHat = bonusHat;
     }
 
-    public void showAllBonusHat(List<SportMagazine> sportMagazines){
+    public static void showAllBonusHat(List<SportMagazine> sportMagazines){
         for(SportMagazine sportMagazine : sportMagazines){
             if(sportMagazine.bonusHat)
                 sportMagazine.getSportMagazineInformation().printEditionInformation();
         }
     }
 
-    public void printByCode(List<SportMagazine> sportMagazines){
+    public static void printByCode(List<SportMagazine> sportMagazines){
         String[] codes = new String[sportMagazines.size()];
         int i = 0;
         for (SportMagazine sportMagazine : sportMagazines){

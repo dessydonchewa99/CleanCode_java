@@ -41,7 +41,7 @@ public class Comic extends PrintEdition {
         return hasSpecialFont;
     }
 
-    public List<Comic> searchByCriteria(List<Comic> comics, boolean picturesOnly, boolean hasSpecialFont){
+    public static List<Comic> searchByCriteria(List<Comic> comics, boolean picturesOnly, boolean hasSpecialFont){
         List<Comic> result = null;
         int i = 0;
         for (Comic comic : comics){
@@ -52,6 +52,7 @@ public class Comic extends PrintEdition {
         }
         return result;
     }
+
     private class ComicsPrice implements PricePerPrintEdition{
 
         @Override

@@ -41,14 +41,14 @@ public class Newspaper extends PrintEdition{
         return adsNumber;
     }
 
-    public int totalAds(List<Newspaper> newspapers){
+    public static int totalAds(List<Newspaper> newspapers){
         int ads = 0;
         for(Newspaper newspaper : newspapers){
             ads += newspaper.adsNumber;
         }
         return ads;
     }
-    public List<Date> afterDate(List<Newspaper> newspapers, Date date){
+    public static List<Date> afterDate(List<Newspaper> newspapers, Date date){
         List<Date> dates = null;
         int count = 0;
 

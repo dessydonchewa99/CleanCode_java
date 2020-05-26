@@ -39,7 +39,7 @@ public class Magazine extends PrintEdition {
         return numberOfInterviews;
     }
     
-    public List<Magazine> intervalOfInterviews(List<Magazine> magazines, int leftBound, int rightBound){
+    public static List<Magazine> intervalOfInterviews(List<Magazine> magazines, int leftBound, int rightBound){
         List<Magazine> result = null;
         int count = 0;
         
@@ -52,7 +52,7 @@ public class Magazine extends PrintEdition {
         return null;
     }
 
-    public Magazine findSpecialMagazine(List<Magazine> magazines, boolean hasPosters, int numberOfInterviews){
+    public static Magazine findSpecialMagazine(List<Magazine> magazines, boolean hasPosters, int numberOfInterviews){
         for(Magazine magazine : magazines){
             if(magazine.hasPosters == hasPosters && magazine.numberOfInterviews == numberOfInterviews) {
                 return magazine;

@@ -6,7 +6,6 @@ public class RetroPoster extends Poster {
     public static final double PRICE_EFFECT_POSTER = 3.35;
 
     private boolean specialEffect = false; //special retro effect
-    private double ratio; //help variable, don't need in constructor
 
     public RetroPoster(){
         super(DEFAULT_PRICE_PER_PAGE, MIN_PAGES, MIN_ISSUE, null, false);
@@ -27,10 +26,6 @@ public class RetroPoster extends Poster {
 
     public boolean getSpecialEffect() {
         return specialEffect;
-    }
-
-    public double getRatio() {
-        return ratio;
     }
 
     public static int calculateRatio(List<RetroPoster> retroPosters){
@@ -64,7 +59,7 @@ public class RetroPoster extends Poster {
 
         @Override
         public double calculatePricePerEdition() {
-            Poster poster = new Poster();
+            Poster poster = new Poster(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getSticky());
             PricePerPrintEdition printPrice = poster.getPosterPrice();
             double result = printPrice.calculatePricePerEdition();
 

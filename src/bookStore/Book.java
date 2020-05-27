@@ -25,7 +25,7 @@ public class Book extends PrintEdition {
         setYear(year);
         setHasHardCovers(hasHardCovers);
     }
-    public Book (Book book){
+    public Book(Book book){
         super(book.getPricePerPage(), book.getPages(), book.getIssueInThousands(), book.getName());
         setAuthorName(book.authorName);
         setYear(book.year);
@@ -56,15 +56,6 @@ public class Book extends PrintEdition {
         return hasHardCovers;
     }
 
-    public boolean checkAuthor(List<Book> bookList, String authorName){
-        int i = 0;
-        for(Book book : bookList){
-            if(book.authorName.equals(authorName)) {
-                return true;
-            }
-        }
-        return false;
-    }
     public void checkLeapYear(){
         boolean leap = false;
         if(year % 4 == 0)
@@ -92,6 +83,15 @@ public class Book extends PrintEdition {
         else{
             System.out.println(year + " is not a leap year.");
         }
+    }
+    public static boolean checkAuthor(List<Book> bookList, String authorName){
+        int i = 0;
+        for(Book book : bookList){
+            if(book.authorName.equals(authorName)) {
+                return true;
+            }
+        }
+        return false;
     }
     public static List<Book> lookAllHardCovers(List<Book> bookList){
         List<Book> result = null;

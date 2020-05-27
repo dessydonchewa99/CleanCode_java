@@ -62,7 +62,7 @@ public class SportMagazine extends Magazine {
         }
     }
 
-    public static void printByCode(List<SportMagazine> sportMagazines){
+    public static void printSortedCodes(List<SportMagazine> sportMagazines){
         String[] codes = new String[sportMagazines.size()];
         int i = 0;
         for (SportMagazine sportMagazine : sportMagazines){
@@ -112,6 +112,18 @@ public class SportMagazine extends Magazine {
         return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
     }
 
+    private class SportMagazinePrice implements PricePerPrintEdition{
+        @Override
+        public double calculatePricePerEdition() {
+            if(bonusHat) {
+                return calculatePriceWithHat();
+            } else{
+                Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews());
+                PricePerPrintEdition printPrice = magazine.getMagazinePrice();
+                return printPrice.calculatePricePerEdition();
+            }
+        }
+    }
     private class SportMagazineInformation implements PrintEditionInformation {
 
         @Override

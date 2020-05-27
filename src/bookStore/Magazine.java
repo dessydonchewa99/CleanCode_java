@@ -14,12 +14,12 @@ public class Magazine extends PrintEdition {
         setHasPosters(false);
         setNumberOfInterviews(0);
     }
-    public Magazine (double pricePerPage, int pages, int issueInThousands, String name, boolean hasPosters, int numberOfInterviews) {
+    public Magazine(double pricePerPage, int pages, int issueInThousands, String name, boolean hasPosters, int numberOfInterviews) {
         super(pricePerPage, pages, issueInThousands, name);
         setHasPosters(hasPosters);
         setNumberOfInterviews(numberOfInterviews);
     }
-    public Magazine (Magazine magazine) {
+    public Magazine(Magazine magazine) {
         super(magazine.getPricePerPage(), magazine.getPages(), magazine.getIssueInThousands(), magazine.getName());
         setHasPosters(magazine.hasPosters);
         setNumberOfInterviews(magazine.numberOfInterviews);

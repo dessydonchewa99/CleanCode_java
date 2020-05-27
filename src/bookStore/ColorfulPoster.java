@@ -29,6 +29,7 @@ public class ColorfulPoster extends Poster {
     public void setSharpColors(boolean sharpColors) {
         this.sharpColors = sharpColors;
     }
+
     public boolean getSharpColors(){
         return this.sharpColors;
     }
@@ -41,7 +42,7 @@ public class ColorfulPoster extends Poster {
 
         @Override
         public double calculatePricePerEdition() {
-            Poster poster = new Poster();
+            Poster poster = new Poster(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getSticky());
             PricePerPrintEdition printPrice = poster.getPosterPrice();
             double result = printPrice.calculatePricePerEdition();
             if(sharpColors) {

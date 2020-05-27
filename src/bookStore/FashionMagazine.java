@@ -7,6 +7,7 @@ import java.util.List;
 public class FashionMagazine extends Magazine {
 
     public static final String[] AVAILABLE_DESTINATIONS = {"ITALY", "GERMANY", "FRANCE", "UK", "USA"};
+    public static final double PRICE_TOMBOLA = 3.15;
 
     private boolean tombolaTicket; // not every edition should have tombola tickets
     private String tombolaTicketDestination;
@@ -34,7 +35,6 @@ public class FashionMagazine extends Magazine {
     public void setTombolaTicket(boolean tombolaTicket) {
         this.tombolaTicket = tombolaTicket;
     }
-
     public void setTombolaTicketDestination(String tombolaTicketDestination) {
         this.tombolaTicketDestination = tombolaTicketDestination == null ? AVAILABLE_DESTINATIONS[0] : tombolaTicketDestination;
     }
@@ -42,7 +42,6 @@ public class FashionMagazine extends Magazine {
     public boolean getTombolaTicket() {
         return tombolaTicket;
     }
-
     public String getTombolaTicketDestination() {
         return tombolaTicketDestination;
     }
@@ -101,6 +100,21 @@ public class FashionMagazine extends Magazine {
         }
 
         return ratio;
+    }
+
+    private class FashionMagazinePrice implements PricePerPrintEdition {
+        Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews());
+        PricePerPrintEdition printPrice = magazine.getMagazinePrice();
+        double result = printPrice.calculatePricePerEdition();
+
+        @Override
+        public double calculatePricePerEdition() {
+            if (tombolaTicket) {
+                return (result + PRICE_TOMBOLA);
+            }else {
+                return result;
+            }
+        }
     }
 
     private class FashionMagazineInformation implements PrintEditionInformation {

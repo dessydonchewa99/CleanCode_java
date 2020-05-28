@@ -2,6 +2,7 @@ package bookStore;
 
 import exceptions.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class FashionMagazine extends Magazine {
@@ -61,6 +62,7 @@ public class FashionMagazine extends Magazine {
         boolean flag = false;
         if((tombolaTicket && tombolaTicketDestination != null) || (tombolaTicket && tombolaTicketDestination != "")) {
             for (int i = 0; i < AVAILABLE_DESTINATIONS.length; i++) {
+                assert tombolaTicketDestination != null;
                 if (tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])) {
                     flag = true;
                     break;
@@ -79,13 +81,16 @@ public class FashionMagazine extends Magazine {
 
     public static double[] ratioDestinations(List<FashionMagazine> fashionMagazines){
         int[] countDestinations = new int[AVAILABLE_DESTINATIONS.length];
-        for(int i = 0; i < fashionMagazines.size(); i++){
-            int j = 0;
-            while (j!=AVAILABLE_DESTINATIONS.length){
-                if(fashionMagazines.get(i).tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])){
-                    countDestinations[j]++;
+
+        for(FashionMagazine fashionMagazine : fashionMagazines){
+            if(fashionMagazine.tombolaTicket){
+                for (int j = 0; j < AVAILABLE_DESTINATIONS.length; j++) {
+                    if(fashionMagazine.tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[j])){
+                        int count = countDestinations[j];
+                        countDestinations[j] = count + 1;
+                    }
+
                 }
-                j++;
             }
         }
 

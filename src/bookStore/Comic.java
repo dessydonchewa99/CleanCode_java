@@ -1,5 +1,6 @@
 package bookStore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Comic extends PrintEdition {
@@ -42,12 +43,11 @@ public class Comic extends PrintEdition {
     }
 
     public static List<Comic> searchByCriteria(List<Comic> comics, boolean picturesOnly, boolean hasSpecialFont){
-        List<Comic> result = null;
+        List<Comic> result = new ArrayList<>();
         int i = 0;
         for (Comic comic : comics){
             if(comic.hasSpecialFont == hasSpecialFont && comic.picturesOnly == picturesOnly) {
-                result.set(i, comic);
-                i++;
+                result.add(comic);
             }
         }
         return result;

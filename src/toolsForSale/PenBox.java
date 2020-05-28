@@ -10,19 +10,36 @@ public class PenBox {
     private ArrayList<Pen> boxOfPens;
 
     public PenBox() {
+
+        boxOfPens = new ArrayList<>();
+
         for(PenColors currentColor : PenColors.values()){
             for(PenTypes currentType : PenTypes.values()){
-                Pen currentPen = new Pen(currentColor, currentType);
+
+                Pen currentPen = new Pen();
+
+                currentPen.setColor(currentColor);
+                currentPen.setType(currentType);
+
+                // System.out.println("" + currentColor + currentType);
                 boxOfPens.add(currentPen);
 
             }
         }
     }
 
+    public ArrayList<Pen> getBoxOfPens() {
+        return boxOfPens;
+    }
+
     public void createBox() {
-        for (int i = 0; i < SELL_SIZE_BOX; i++){
-            Pen current = new Pen();
-            boxOfPens.set(i, current.takeRandomPen());
+        boxOfPens = new ArrayList<>();
+        int i = 0;
+        while (i!=SELL_SIZE_BOX){
+            Pen result = new Pen();
+            result = result.takeRandomPen();
+            boxOfPens.add(result);
+            i++;
         }
     }
 
@@ -54,7 +71,8 @@ public class PenBox {
         for(PenColors currentColor : PenColors.values()){
             for(PenTypes currentType : PenTypes.values()){
                 Pen currentPen = new Pen(currentColor, currentType);
-                System.out.println(currentPen);
+                System.out.println(currentPen.color);
+                System.out.println(currentPen.type);
             }
         }
     }

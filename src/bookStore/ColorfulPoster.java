@@ -5,7 +5,7 @@ public class ColorfulPoster extends Poster {
     public static final int CLIENT_NUMBER_DISCOUNT = 10;
     public static final int DISCOUNT = 2; //it means 50%
 
-    private static int order = 1;
+    private static int order = 0;
 
     private boolean sharpColors = false;
 
@@ -32,6 +32,10 @@ public class ColorfulPoster extends Poster {
 
     public boolean getSharpColors(){
         return this.sharpColors;
+    }
+
+    public static int getOrder(){
+        return order;
     }
 
     public void viewNumberDiscounts(){

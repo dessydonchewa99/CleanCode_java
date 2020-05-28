@@ -1,5 +1,6 @@
 package bookStore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Magazine extends PrintEdition {
@@ -40,16 +41,14 @@ public class Magazine extends PrintEdition {
     }
     
     public static List<Magazine> intervalOfInterviews(List<Magazine> magazines, int leftBound, int rightBound){
-        List<Magazine> result = null;
-        int count = 0;
+        List<Magazine> result = new ArrayList<>();
         
         for(Magazine magazine : magazines){
             if(magazine.numberOfInterviews >= leftBound && magazine.numberOfInterviews <= rightBound) {
-                result.set(count, magazine);
-                count++;
+                result.add(magazine);
             }
         }
-        return null;
+        return result;
     }
 
     public static Magazine findSpecialMagazine(List<Magazine> magazines, boolean hasPosters, int numberOfInterviews){

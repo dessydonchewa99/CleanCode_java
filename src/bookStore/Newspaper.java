@@ -1,6 +1,7 @@
 package bookStore;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -49,13 +50,11 @@ public class Newspaper extends PrintEdition{
         return ads;
     }
     public static List<Date> afterDate(List<Newspaper> newspapers, Date date){
-        List<Date> dates = null;
-        int count = 0;
+        List<Date> dates = new ArrayList<>();
 
         for(Newspaper newspaper : newspapers){
             if(newspaper.printDate.compareTo(date) > 0){
-                assert dates != null;
-                dates.set(count, newspaper.printDate);
+                dates.add(newspaper.printDate);
             }
         }
 

@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8565a462-f031-4a71-bbc2-1b4a5e5b710d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CleanCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/ColorfulPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/ColorfulPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Comic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Comic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Magazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Newspaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Newspaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/PrintEditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/PrintEditionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/PenBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/PenBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +38,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -34,6 +49,97 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+  </component>
+  <component name="RunManager" selected="JUnit.PrintEditionTest.testSearchByCriteria">
+    <configuration name="PrintEditionTest.testCheckAuthor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PrintEditionTest" />
+      <option name="METHOD_NAME" value="testCheckAuthor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintEditionTest.testLeapYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PrintEditionTest" />
+      <option name="METHOD_NAME" value="testLeapYear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintEditionTest.testLookHardCovers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PrintEditionTest" />
+      <option name="METHOD_NAME" value="testLookHardCovers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintEditionTest.testRatioDestinations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PrintEditionTest" />
+      <option name="METHOD_NAME" value="testRatioDestinations" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintEditionTest.testSearchByCriteria" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PrintEditionTest" />
+      <option name="METHOD_NAME" value="testSearchByCriteria" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PrintEditionTest.testSearchByCriteria" />
+        <item itemvalue="JUnit.PrintEditionTest.testLookHardCovers" />
+        <item itemvalue="JUnit.PrintEditionTest.testCheckAuthor" />
+        <item itemvalue="JUnit.PrintEditionTest.testLeapYear" />
+        <item itemvalue="JUnit.PrintEditionTest.testRatioDestinations" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -45,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590438340418</updated>
-      <workItem from="1590438342148" duration="11055000" />
+      <workItem from="1590438342148" duration="31818000" />
     </task>
     <servers />
   </component>
@@ -53,13 +159,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="66" width="1080" height="710" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590620795218">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="100" y="66" width="1080" height="710" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.800@0.0.1280.800" timestamp="1590620795218" />
+    <state x="100" y="84" width="1080" height="653" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.736@0.23.1280.736" timestamp="1590617225671" />
     <state x="453" y="112" key="#com.intellij.ide.util.MemberChooser" timestamp="1590524035636">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="453" y="112" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1590524035636" />
+    <state width="1238" height="275" key="GridCell.Tab.0.bottom" timestamp="1590669246838">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="275" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1590669246838" />
+    <state width="1238" height="275" key="GridCell.Tab.0.center" timestamp="1590669246835">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="275" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1590669246835" />
+    <state width="1238" height="275" key="GridCell.Tab.0.left" timestamp="1590669246834">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="275" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1590669246834" />
+    <state width="1238" height="275" key="GridCell.Tab.0.right" timestamp="1590669246836">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="275" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1590669246836" />
+    <state x="352" y="303" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590612930293">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="352" y="303" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.800@0.0.1280.800" timestamp="1590612930293" />
+    <state x="378" y="161" width="524" height="482" key="extract.method.dialog" timestamp="1590622524640">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="378" y="161" width="524" height="482" key="extract.method.dialog/0.0.1280.800@0.0.1280.800" timestamp="1590622524640" />
     <state x="34" y="23" width="1212" height="736" key="new project wizard" timestamp="1590573328781">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="34" y="23" width="1212" height="736" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1590573328781" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1590666968605">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1590666968605" />
   </component>
 </project>

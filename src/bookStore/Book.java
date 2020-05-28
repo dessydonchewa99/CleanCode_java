@@ -1,5 +1,6 @@
 package bookStore;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class Book extends PrintEdition {
         return hasHardCovers;
     }
 
-    public void checkLeapYear(){
+    public boolean checkLeapYear(){
         boolean leap = false;
         if(year % 4 == 0)
         {
@@ -79,9 +80,11 @@ public class Book extends PrintEdition {
 
         if(leap) {
             System.out.println(year + " is a leap year.");
+            return true;
         }
         else{
             System.out.println(year + " is not a leap year.");
+            return false;
         }
     }
     public static boolean checkAuthor(List<Book> bookList, String authorName){
@@ -94,12 +97,10 @@ public class Book extends PrintEdition {
         return false;
     }
     public static List<Book> lookAllHardCovers(List<Book> bookList){
-        List<Book> result = null;
-        int i = 0;
+        List<Book> result = new ArrayList<>();
         for(Book book : bookList){
             if(book.getHasHardcovers()) {
-                result.set(i, book);
-                i++;
+                result.add(book);
             }
         }
 

@@ -28,23 +28,17 @@ public class RetroPoster extends Poster {
         return specialEffect;
     }
 
-    public static int calculateRatio(List<RetroPoster> retroPosters){
+    public static double calculateRatio(List<RetroPoster> retroPosters){
         int countSpecial = 0;
         int countNotSpecial = 0;
         int i = 0;
         if(retroPosters != null) {
-            while (true) {
-                if(retroPosters.isEmpty()) {
-                    break;
-                }else {
-                    if (retroPosters.get(i).specialEffect) {
-                        countSpecial++;
-                    } else {
-                        countNotSpecial++;
-                    }
+            for(RetroPoster retroPoster : retroPosters){
+                if (retroPoster.specialEffect) {
+                    countSpecial++;
+                } else {
+                    countNotSpecial++;
                 }
-
-                i++;
             }
         }
 
@@ -52,7 +46,7 @@ public class RetroPoster extends Poster {
             System.out.println("Divide by zero");
             return -1;
         }
-        else return countSpecial/countNotSpecial;
+        else return (double)countSpecial/(double)countNotSpecial;
     }
 
     private class RetroPosterPrice implements PricePerPrintEdition {

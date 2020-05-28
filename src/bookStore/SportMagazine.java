@@ -2,6 +2,7 @@ package bookStore;
 
 import exceptions.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -63,17 +64,17 @@ public class SportMagazine extends Magazine {
     }
 
     public static void printSortedCodes(List<SportMagazine> sportMagazines){
-        String[] codes = new String[sportMagazines.size()];
-        int i = 0;
+        List<String> codes = new ArrayList<>();
         for (SportMagazine sportMagazine : sportMagazines){
-            codes[i] = sportMagazine.codeOfHat;
-            i++;
+            if(sportMagazine.bonusHat) {
+                codes.add(sportMagazine.codeOfHat);
+            }
         }
 
-        Arrays.sort(codes);
+        java.util.Collections.sort(codes);
 
-        for(i = 0; i < codes.length; i++){
-            System.out.println(codes[i]);
+        for(int i = 0; i < codes.size(); i++){
+            System.out.println(codes.get(i));
         }
     }
 

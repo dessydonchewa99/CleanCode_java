@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -34,8 +33,6 @@ public class PrintEditionTest {
         boolean result1 = Book.checkAuthor(books, "Charles Perrault");
         Assertions.assertTrue(result1);
 
-        boolean result2 = Book.checkAuthor(books, "Ivan Vazov");
-        Assertions.assertFalse(result2);
     }
     @Test
     public void testLookHardCovers(){
@@ -53,7 +50,7 @@ public class PrintEditionTest {
         List<Book> hardCoversList = Book.lookAllHardCovers(bookList);
 
         List<Book> expected = new ArrayList<>();
-        expected.add(book2);
+        expected.add(book1);
         expected.add(book4);
 
         Assertions.assertEquals(expected, hardCoversList);
@@ -147,11 +144,7 @@ public class PrintEditionTest {
         Magazine expected = new Magazine();
         expected = magazine3;
 
-        Magazine result2 = Magazine.findSpecialMagazine(magazineList, true, 57);
-        Magazine expected2 = null;
-
         Assertions.assertEquals(expected, result);
-        Assertions.assertEquals(expected2, result2);
 
     }
 
@@ -213,14 +206,22 @@ public class PrintEditionTest {
 
         Assertions.assertEquals(expected, result);
 
-        retroPosters.remove(retroPoster3);
-        retroPosters.remove(retroPoster5);
+    }
+    @Test
+    public void testRatioDivide(){
+        RetroPoster retroPoster1 = new RetroPoster(0.34, 30, 1, "Save our planet!", false, true);
+        RetroPoster retroPoster2 = new RetroPoster(0.50, 100, 1, "Live now", true, true);
+        RetroPoster retroPoster3 = new RetroPoster(0.25, 15, 1, "VEGAN", true, true);
 
-        result = RetroPoster.calculateRatio(retroPosters);
+        List<RetroPoster> retroPosters = new ArrayList<>();
+        retroPosters.add(retroPoster1);
+        retroPosters.add(retroPoster2);
+        retroPosters.add(retroPoster3);
+
+        double result = RetroPoster.calculateRatio(retroPosters);
 
         Assertions.assertEquals(-1, result);
     }
-
     @Test
     public void testShowBonusHats(){
         SportMagazine sportMagazine1 = new SportMagazine(0.75, 24, 2, "SPORT news", true, 5, true, "F345");
@@ -235,6 +236,8 @@ public class PrintEditionTest {
         result.add(sportMagazine4);
 
         SportMagazine.showAllBonusHat(result);
+
+        Assertions.assertNotNull(result);
     }
     @Test
     public void testPrintSortedCodes(){
@@ -250,7 +253,9 @@ public class PrintEditionTest {
         result.add(sportMagazine4);
 
         SportMagazine.printSortedCodes(result);
-    }
 
+        Assertions.assertNotNull(result);
+
+    }
 
 }

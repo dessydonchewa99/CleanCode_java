@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SportMagazine extends Magazine {
-    private final double FOOTBALL_HAT_PRICE = 9.0;
-    private final double VOLLEYBALL_HAT_PRICE = 7.0;
+    private static final double FOOTBALL_HAT_PRICE = 9.0;
+    private static final double VOLLEYBALL_HAT_PRICE = 7.0;
     private final char[] CODES = {'F', 'V'};
 
     private boolean bonusHat; // not every edition should make bonus hats with Magazine
@@ -59,7 +59,7 @@ public class SportMagazine extends Magazine {
     public static void showAllBonusHat(List<SportMagazine> sportMagazines){
         for(SportMagazine sportMagazine : sportMagazines){
             if(sportMagazine.bonusHat)
-                sportMagazine.getSportMagazineInformation().printEditionInformation();
+                sportMagazine.getPrintInformation().printEditionInformation();
         }
     }
 
@@ -81,7 +81,7 @@ public class SportMagazine extends Magazine {
     public double calculatePriceWithHat(){
         Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(),
                 getHasPosters(), getNumberOfInterviews());
-        PricePerPrintEdition pricePerPrintEdition = magazine.getMagazinePrice();
+        PricePerPrintEdition pricePerPrintEdition = magazine.getPrintEditionPrice();
 
         if((bonusHat && codeOfHat!=null) || (bonusHat && codeOfHat!="")){
             char[] typeHat = new char[1];
@@ -120,7 +120,7 @@ public class SportMagazine extends Magazine {
                 return calculatePriceWithHat();
             } else{
                 Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews());
-                PricePerPrintEdition printPrice = magazine.getMagazinePrice();
+                PricePerPrintEdition printPrice = magazine.getPrintEditionPrice();
                 return printPrice.calculatePricePerEdition();
             }
         }
@@ -129,12 +129,18 @@ public class SportMagazine extends Magazine {
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
             System.out.printf("Has posters: %b%nNumber of interviews: %d%nBonusHat: %b%nCode of hat: %s%n",
                     getHasPosters(), getNumberOfInterviews(), bonusHat, codeOfHat);
         }
     }
 
-    public PrintEditionInformation getSportMagazineInformation() {
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new SportMagazinePrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
         return new SportMagazineInformation();
     }
 

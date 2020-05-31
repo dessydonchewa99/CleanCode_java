@@ -55,12 +55,18 @@ public class Poster extends PrintEdition {
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
             System.out.printf("Sticky: %b%n", sticky);
         }
     }
 
-    public final PricePerPrintEdition getPosterPrice(){
+    public PricePerPrintEdition getPrintEditionPrice() {
         return new PosterPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
+        return new PosterInformation();
     }
 
 }

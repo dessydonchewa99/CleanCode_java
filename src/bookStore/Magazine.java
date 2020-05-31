@@ -72,20 +72,22 @@ public class Magazine extends PrintEdition {
         }
     }
 
-    public PricePerPrintEdition getMagazinePrice() {
-        return new MagazinePrice();
-    }
-
     private class MagazineInformation implements PrintEditionInformation {
 
         @Override
         public void printEditionInformation() {
-            System.out.printf("Has posters: %b%n\nNumber of interviews: %d%n",
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
+            System.out.printf("Has posters: %b%nNumber of interviews: %d%n",
                     hasPosters, numberOfInterviews);
         }
     }
 
-    public PrintEditionInformation getMagazineInformation() {
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new MagazinePrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
         return new MagazineInformation();
     }
 }

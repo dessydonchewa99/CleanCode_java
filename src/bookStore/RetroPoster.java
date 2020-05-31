@@ -54,7 +54,7 @@ public class RetroPoster extends Poster {
         @Override
         public double calculatePricePerEdition() {
             Poster poster = new Poster(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getSticky());
-            PricePerPrintEdition printPrice = poster.getPosterPrice();
+            PricePerPrintEdition printPrice = poster.getPrintEditionPrice();
             double result = printPrice.calculatePricePerEdition();
 
             if(specialEffect) {
@@ -68,9 +68,18 @@ public class RetroPoster extends Poster {
 
         @Override
         public void printEditionInformation() {
-            System.out.printf("Sticky: %b%n\nRetro poster: %b%n", getSticky(), specialEffect);
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
+            System.out.printf("Sticky: %b%nRetro poster: %b%n", getSticky(), specialEffect);
         }
     }
 
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new RetroPosterPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
+        return new RetroPosterInformation();
+    }
 }
 

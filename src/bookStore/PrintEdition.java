@@ -59,5 +59,30 @@ public class PrintEdition {
     public double calculatePrintPrice() {
         return pricePerPage*pages;
     }
+
+    private class PrintEditionPrice implements PricePerPrintEdition {
+
+        @Override
+        public double calculatePricePerEdition() {
+            return calculatePrintPrice();
+        }
+    }
+
+    private class PrintInformation implements PrintEditionInformation {
+
+        @Override
+        public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    pricePerPage, pages, issueInThousands, name);
+        }
+    }
+
+   public PricePerPrintEdition getPrintEditionPrice(){
+        return new PrintEditionPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation(){
+        return new PrintInformation();
+    }
 }
 

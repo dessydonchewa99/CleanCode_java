@@ -123,9 +123,19 @@ public class Book extends PrintEdition {
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
             System.out.printf("Author name: %s%nRelease year: %d%nHard covers: %b%n",
                     authorName, year, hasHardCovers);
         }
+    }
+
+    public PricePerPrintEdition getPrintEditionPrice(){
+        return new BookPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation(){
+        return new BookInformation();
     }
 }
 

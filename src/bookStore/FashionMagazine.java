@@ -57,7 +57,7 @@ public class FashionMagazine extends Magazine {
         magazine.setHasPosters(getHasPosters());
         magazine.setNumberOfInterviews(getNumberOfInterviews());
 
-        PricePerPrintEdition pricePerPrintEdition = magazine.getMagazinePrice();
+        PricePerPrintEdition pricePerPrintEdition = magazine.getPrintEditionPrice();
 
         boolean flag = false;
         if((tombolaTicket && tombolaTicketDestination != null) || (tombolaTicket && tombolaTicketDestination != "")) {
@@ -109,7 +109,7 @@ public class FashionMagazine extends Magazine {
 
     private class FashionMagazinePrice implements PricePerPrintEdition {
         Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews());
-        PricePerPrintEdition printPrice = magazine.getMagazinePrice();
+        PricePerPrintEdition printPrice = magazine.getPrintEditionPrice();
         double result = printPrice.calculatePricePerEdition();
 
         @Override
@@ -126,8 +126,18 @@ public class FashionMagazine extends Magazine {
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
             System.out.printf("Has posters: %b\nNumber of interviews: %d\nTombola ticket: %b\nTicket destination: %s\n",
                     getHasPosters(), getNumberOfInterviews(), tombolaTicket, tombolaTicketDestination);
         }
+    }
+
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new FashionMagazinePrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
+        return new FashionMagazineInformation();
     }
 }

@@ -47,7 +47,7 @@ public class ColorfulPoster extends Poster {
         @Override
         public double calculatePricePerEdition() {
             Poster poster = new Poster(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getSticky());
-            PricePerPrintEdition printPrice = poster.getPosterPrice();
+            PricePerPrintEdition printPrice = poster.getPrintEditionPrice();
             double result = printPrice.calculatePricePerEdition();
             if(sharpColors) {
                 if(order % CLIENT_NUMBER_DISCOUNT == 0) {
@@ -70,7 +70,18 @@ public class ColorfulPoster extends Poster {
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
+
             System.out.printf("Sticky: %b%nSharp colors: %b%n", getSticky(), sharpColors);
         }
+    }
+
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new ColorfulPosterPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
+        return new PosterInformation();
     }
 }

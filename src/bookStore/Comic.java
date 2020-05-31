@@ -77,9 +77,19 @@ public class Comic extends PrintEdition {
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
             System.out.printf("Pictures only: %b%nHas special font: %b%n",
                     picturesOnly, hasSpecialFont);
         }
+    }
+
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new ComicsPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
+        return new ComicsInformation();
     }
 }
 

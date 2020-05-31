@@ -73,11 +73,21 @@ public class Newspaper extends PrintEdition{
 
         @Override
         public void printEditionInformation() {
+            System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
+                    getPricePerPage(), getPages(), getIssueInThousands(), getName());
             System.out.print("Date: ");
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             System.out.println(formatter.format(printDate));
             System.out.printf("Ads number: %d%n", adsNumber);
         }
+    }
+
+    public PricePerPrintEdition getPrintEditionPrice() {
+        return new NewspaperPrice();
+    }
+
+    public PrintEditionInformation getPrintInformation() {
+        return new NewspaperInformation();
     }
 }
 

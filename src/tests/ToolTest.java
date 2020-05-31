@@ -11,38 +11,56 @@ public class ToolTest {
         Pen result = new Pen();
         result = result.takeRandomPen();
 
+        boolean flag = result.getColor() != null && result.getType() != null;
+
         System.out.println(result.getType());
         System.out.println(result.getColor());
 
-        Assertions.assertNotEquals(null, result);
+        Assertions.assertTrue(flag);
     }
     @Test
     public void testCreateBox(){
         PenBox result = new PenBox();
         result.createBox();
 
-        for(int i = 0; i < result.getBoxOfPens().size(); i++){
-            System.out.println(result.getBoxOfPens().get(i).getType());
-        }
+        boolean flag = false;
 
-        Assertions.assertNotEquals(null, result);
+        for(int i = 0; i < result.getBoxOfPens().size(); i++){
+            if (result.getBoxOfPens().get(i).getColor() != null && result.getBoxOfPens().get(i).getType() != null) {
+                flag = true;
+            } else{
+                Assertions.assertTrue(flag);
+            }
+        }
     }
     @Test
     public void testSortByType(){
         PenBox result = new PenBox();
         result.sortByType();
 
-        for(int i = 0; i < result.getBoxOfPens().size(); i++){
-            System.out.println(result.getBoxOfPens().get(i).getType());
-        }
+        boolean flag = false;
 
-        Assertions.assertNotEquals(null, result);
+        for(int i = 0; i < result.getBoxOfPens().size(); i++){
+            if (result.getBoxOfPens().get(i).getColor() != null && result.getBoxOfPens().get(i).getType() != null) {
+                flag = true;
+            } else{
+                Assertions.assertTrue(flag);
+            }
+        }
     }
     @Test
     public void testOfferedPens(){
         PenBox result = new PenBox();
         result.showOfferedPens();
 
-        Assertions.assertNotEquals(null, result);
+        boolean flag = false;
+
+        for(int i = 0; i < result.getBoxOfPens().size(); i++){
+            if (result.getBoxOfPens().get(i).getColor() != null && result.getBoxOfPens().get(i).getType() != null) {
+                flag = true;
+            } else{
+                Assertions.assertTrue(flag);
+            }
+        }
     }
 }

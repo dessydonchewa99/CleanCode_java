@@ -9,10 +9,10 @@ import java.util.List;
 public class SportMagazine extends Magazine {
     private static final double FOOTBALL_HAT_PRICE = 9.0;
     private static final double VOLLEYBALL_HAT_PRICE = 7.0;
-    private final char[] CODES = {'F', 'V'};
+    private final char[] CODES = {'F', 'V'}; // Code should starts with F(Football) or V(Volleyball) fan hat
 
     private boolean bonusHat; // not every edition should make bonus hats with Magazine
-    private String codeOfHat; // Code should start with F(Football) or V(Volleyball) fan hat NOW
+    private String codeOfHat;
     private double priceForHat;
 
     public SportMagazine(){

@@ -2,8 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import toolsForSale.Pen;
-import toolsForSale.PenBox;
+import toolsForSale.*;
 
 public class ToolTest {
     @Test

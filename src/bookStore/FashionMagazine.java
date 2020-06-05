@@ -95,8 +95,8 @@ public class FashionMagazine extends Magazine {
         }
 
         int all = 0;
-        for(int i = 0; i < countDestinations.length; i++){
-            all = all + countDestinations[i];
+        for (int countDestination : countDestinations) {
+            all = all + countDestination;
         }
 
         double[] ratio = new double[countDestinations.length];

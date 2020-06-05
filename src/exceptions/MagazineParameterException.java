@@ -36,8 +36,8 @@ public class MagazineParameterException extends Exception {
         Scanner scanner = new Scanner(System.in);
         boolean flag = false;
         while (true){
-            for (int i = 0; i < fashionMagazine.AVAILABLE_DESTINATIONS.length; i++) {
-                if (fashionMagazine.getTombolaTicketDestination().equals(fashionMagazine.AVAILABLE_DESTINATIONS[i])) {
+            for (int i = 0; i < FashionMagazine.AVAILABLE_DESTINATIONS.length; i++) {
+                if (fashionMagazine.getTombolaTicketDestination().equals(FashionMagazine.AVAILABLE_DESTINATIONS[i])) {
                     flag = true;
                     break;
                 }

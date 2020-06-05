@@ -31,7 +31,6 @@ public class RetroPoster extends Poster {
     public static double calculateRatio(List<RetroPoster> retroPosters){
         int countSpecial = 0;
         int countNotSpecial = 0;
-        int i = 0;
         if(retroPosters != null) {
             for(RetroPoster retroPoster : retroPosters){
                 if (retroPoster.specialEffect) {

@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8565a462-f031-4a71-bbc2-1b4a5e5b710d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CleanCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/MagazineParameterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/MagazineParameterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/PrintList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/PrintList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/SortList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/SortList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/TotalPriceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/TotalPriceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/ToolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ToolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/ProtractorTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/ProtractorTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/RulerTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/RulerTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/TriangleTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/TriangleTool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +51,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
-  <component name="RunManager" selected="JUnit.SortTest">
+  <component name="RunManager" selected="JUnit.ToolTest.testProtractorValidation">
     <configuration name="SortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCode" />
       <extension name="coverage">
@@ -91,22 +99,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortTest.sortByInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SortTest" />
-      <option name="METHOD_NAME" value="sortByInteger" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SortTest.sortByString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCode" />
       <extension name="coverage">
@@ -123,13 +115,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ToolTest.testProtractorValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ToolTest" />
+      <option name="METHOD_NAME" value="testProtractorValidation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ToolTest.testProtractorValidation" />
         <item itemvalue="JUnit.SortTest" />
         <item itemvalue="JUnit.SortTest.sortByString" />
         <item itemvalue="JUnit.SortTest.sortByDate" />
         <item itemvalue="JUnit.SortTest.sortByDecimal" />
-        <item itemvalue="JUnit.SortTest.sortByInteger" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590438340418</updated>
       <workItem from="1590438342148" duration="48756000" />
-      <workItem from="1591297189735" duration="2574000" />
+      <workItem from="1591297189735" duration="3520000" />
     </task>
     <servers />
   </component>
@@ -161,26 +169,26 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="453" y="112" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1590524035636" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1591346315229">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1591347194420">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1590940295917" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591346315229" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1591346315227">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591347194420" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1591347194419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1590940295915" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591346315227" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1591346315227">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591347194419" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1591347194418">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1590940295914" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591346315227" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1591346315228">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591347194418" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1591347194420">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1590940295915" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591346315228" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591347194420" />
     <state x="208" y="31" key="SettingsEditor" timestamp="1591297365561">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -4,7 +4,7 @@ import exceptions.ToolMeasureException;
 
 public class TriangleTool extends GeometryTool {
 
-    public TriangleTool() {
+    public TriangleTool(GeometryToolMeasure centimeter) {
         super();
     }
 

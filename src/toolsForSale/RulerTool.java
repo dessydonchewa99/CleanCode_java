@@ -4,7 +4,7 @@ import exceptions.ToolMeasureException;
 
 public class RulerTool extends GeometryTool {
 
-    public RulerTool(){
+    public RulerTool(GeometryToolMeasure centimeter){
         super();
     }
 

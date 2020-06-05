@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8565a462-f031-4a71-bbc2-1b4a5e5b710d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exceptions/MagazineParameterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/MagazineParameterException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/PrintList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/PrintList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/SortList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/SortList.java" afterDir="false" />
@@ -152,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590438340418</updated>
       <workItem from="1590438342148" duration="48756000" />
-      <workItem from="1591297189735" duration="3520000" />
+      <workItem from="1591297189735" duration="3772000" />
     </task>
     <servers />
   </component>

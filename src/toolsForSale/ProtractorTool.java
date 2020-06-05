@@ -4,7 +4,7 @@ import exceptions.ToolMeasureException;
 
 public class ProtractorTool extends GeometryTool {
 
-    public ProtractorTool(){
+    public ProtractorTool(GeometryToolMeasure centimeter){
         super();
     }
 

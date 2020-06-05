@@ -12,9 +12,7 @@ public class SortList<T extends Comparable<T>> {
     }
     public SortList(List<T> objects){
         this.objects = new ArrayList<>(objects.size());
-        for(T object: objects){
-            this.objects.add(object);
-        }
+        this.objects.addAll(objects);
     }
 
     public List<T> sort() {

@@ -17,9 +17,7 @@ public class PrintList<T extends PrintEdition> {
 
     public PrintList(List<T> objects) {
         this.objects = new ArrayList<>(objects.size());
-        for(T object: objects){
-            this.objects.add(object);
-        }
+        this.objects.addAll(objects);
     }
 
     public void printObjects() {

@@ -1,5 +1,9 @@
 package bookStore;
-
+/**
+ * Represents a FashionMagazine.
+ * @author Desislava Dontcheva
+ * @version 1.0
+ */
 import exceptions.*;
 
 import java.util.Arrays;
@@ -13,11 +17,25 @@ public class FashionMagazine extends Magazine {
     private boolean tombolaTicket; // not every edition should have tombola tickets
     private String tombolaTicketDestination;
 
+    /**
+     * Default constructor for class FashionMagazine.
+     */
     public FashionMagazine(){
         super(DEFAULT_PRICE_PER_PAGE, MIN_PAGES, MIN_ISSUE, null, false, 0);
         setTombolaTicket(false);
         setTombolaTicketDestination(null);
     }
+    /**
+     * Constructor with parameters for class FashionMagazine.
+     * @param pricePerPage This is the price per page of the FashionMagazine.
+     * @param pages This is the amount of pages of the FashionMagazine.
+     * @param issueInThousands This is the issue count in thousands of the FashionMagazine.
+     * @param name This is the name of the FashionMagazine.
+     * @param hasPosters Shows if the FashionMagazine has posters.
+     * @param numberOfInterviews This is the number of interviews of the FashionMagazine.
+     * @param tombolaTicket Shows if the FashionMagazine has tombola ticket.
+     * @param tombolaTicketDestination This is the destination of the tombola ticket of the FashionMagazine.
+     */
     public FashionMagazine(double pricePerPage, int pages, int issueInThousands, String name, boolean hasPosters,
                            int numberOfInterviews, boolean tombolaTicket, String tombolaTicketDestination){
         super(pricePerPage, pages, issueInThousands, name, hasPosters, numberOfInterviews);
@@ -25,6 +43,10 @@ public class FashionMagazine extends Magazine {
         if(tombolaTicket) setTombolaTicketDestination(tombolaTicketDestination);
         else setTombolaTicketDestination(null);
     }
+    /**
+     * Copy constructor for class FashionMagazine.
+     * @param fashionMagazine Object of class FashionMagazine.
+     */
     public FashionMagazine(FashionMagazine fashionMagazine){
         super(fashionMagazine.getPricePerPage(), fashionMagazine.getPages(), fashionMagazine.getIssueInThousands(),
                 fashionMagazine.getName(), fashionMagazine.getHasPosters(), fashionMagazine.getNumberOfInterviews());
@@ -33,20 +55,42 @@ public class FashionMagazine extends Magazine {
         else setTombolaTicketDestination(null);
     }
 
+    /**
+     * This method sets tombolaTicket of class FashionMagazine.
+     * @param tombolaTicket Shows if the FashionMagazine has tombola ticket.
+     */
     public void setTombolaTicket(boolean tombolaTicket) {
         this.tombolaTicket = tombolaTicket;
     }
+    /**
+     * This method sets tombolaTicketDestination of class FashionMagazine.
+     * @param tombolaTicketDestination This is the destination of the tombola ticket of the FashionMagazine.
+     */
     public void setTombolaTicketDestination(String tombolaTicketDestination) {
         this.tombolaTicketDestination = tombolaTicketDestination == null ? AVAILABLE_DESTINATIONS[0] : tombolaTicketDestination;
     }
 
+    /**
+     * This method gets tombolaTicket of class FashionMagazine.
+     * @return boolean Shows if the FashionMagazine has tombola ticket.
+     */
     public boolean getTombolaTicket() {
         return tombolaTicket;
     }
+
+    /**
+     * This method gets tombolaTicketDestination of class FashionMagazine.
+     * @return String This is the destination of the tombola ticket of the FashionMagazine.
+     */
     public String getTombolaTicketDestination() {
         return tombolaTicketDestination;
     }
 
+    /**
+     * This method searches if the input tombola ticket destination is in the
+     * array of available destinations. If it's not, creates an object of
+     * class MagazineParameterException.
+     */
     public void searchTombolaTicket(){
         Magazine magazine = new Magazine();
 
@@ -79,6 +123,11 @@ public class FashionMagazine extends Magazine {
         }
     }
 
+    /**
+     * This method calculates destinations ratio in FashionMagazine List, calculated in percents.
+     * @param fashionMagazines This is the Magazine list.
+     * @return double[] This is the result array with percents by destination.
+     */
     public static double[] ratioDestinations(List<FashionMagazine> fashionMagazines){
         int[] countDestinations = new int[AVAILABLE_DESTINATIONS.length];
 
@@ -107,11 +156,18 @@ public class FashionMagazine extends Magazine {
         return ratio;
     }
 
+    /**
+     * This is a private inner class that implements PricePerPrintEdition interface.
+     */
     private class FashionMagazinePrice implements PricePerPrintEdition {
         Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews());
         PricePerPrintEdition printPrice = magazine.getPrintEditionPrice();
         double result = printPrice.calculatePricePerEdition();
 
+        /**
+         * This method calculates the price per FashionMagazine.
+         * @return double This is the total price of the FashionMagazine.
+         */
         @Override
         public double calculatePricePerEdition() {
             if (tombolaTicket) {
@@ -121,9 +177,14 @@ public class FashionMagazine extends Magazine {
             }
         }
     }
-
+    /**
+     * This is a private inner class that implements PrintEditionInformation interface.
+     */
     private class FashionMagazineInformation implements PrintEditionInformation {
 
+        /**
+         * This method prints formatted information of the FashionMagazine.
+         */
         @Override
         public void printEditionInformation() {
             System.out.printf("Price per page: %.2f%nPages: %d%nIssue in thousands: %d%nName: %s%n",
@@ -133,10 +194,17 @@ public class FashionMagazine extends Magazine {
         }
     }
 
+    /**
+     * This method gets an instance of the private inner class FashionMagazinePrice.
+     * @return new object of FashionMagazinePrice class
+     */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new FashionMagazinePrice();
     }
-
+    /**
+     * This method gets an instance of the private inner class FashionMagazineInformation.
+     * @return new object of FashionMagazineInformation class
+     */
     public PrintEditionInformation getPrintInformation() {
         return new FashionMagazineInformation();
     }

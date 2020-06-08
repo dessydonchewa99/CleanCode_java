@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8565a462-f031-4a71-bbc2-1b4a5e5b710d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/ColorfulPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/ColorfulPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Comic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Comic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/FashionMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Magazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Newspaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Newspaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/Poster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/Poster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/PricePerPrintEdition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/PricePerPrintEdition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/PrintEdition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/PrintEdition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/PrintEditionInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/PrintEditionInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/RetroPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookStore/SportMagazine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exceptions/MagazineParameterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/MagazineParameterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/ToolMeasureException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/ToolMeasureException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/PrintList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/PrintList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/SortList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/SortList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/TotalPriceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/TotalPriceList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/ToolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ToolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/GeometryTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/GeometryTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/GeometryToolMeasure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/GeometryToolMeasure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/Pen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/Pen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/PenBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/PenBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/PenColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/PenColors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolsForSale/PenTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/PenTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/toolsForSale/ProtractorTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/ProtractorTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/toolsForSale/RulerTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/RulerTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/toolsForSale/TriangleTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolsForSale/TriangleTool.java" afterDir="false" />
@@ -45,9 +64,24 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="JUnit.ToolTest.testProtractorValidation">
+  <component name="RunManager" selected="JUnit.ToolTest">
+    <configuration name="PrintEditionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PrintEditionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCode" />
       <extension name="coverage">
@@ -59,38 +93,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SortTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortTest.sortByDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SortTest" />
-      <option name="METHOD_NAME" value="sortByDate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortTest.sortByDecimal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SortTest" />
-      <option name="METHOD_NAME" value="sortByDecimal" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,6 +109,21 @@
       <option name="MAIN_CLASS_NAME" value="tests.SortTest" />
       <option name="METHOD_NAME" value="sortByString" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ToolTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ToolTest.testProtractorValidation" />
+        <item itemvalue="JUnit.ToolTest" />
+        <item itemvalue="JUnit.PrintEditionTest" />
         <item itemvalue="JUnit.SortTest" />
+        <item itemvalue="JUnit.ToolTest.testProtractorValidation" />
         <item itemvalue="JUnit.SortTest.sortByString" />
-        <item itemvalue="JUnit.SortTest.sortByDate" />
-        <item itemvalue="JUnit.SortTest.sortByDecimal" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +165,17 @@
       <option name="presentableId" value="Default" />
       <updated>1590438340418</updated>
       <workItem from="1590438342148" duration="48756000" />
-      <workItem from="1591297189735" duration="3772000" />
+      <workItem from="1591297189735" duration="4497000" />
+      <workItem from="1591549284318" duration="2696000" />
+      <workItem from="1591552233973" duration="1255000" />
+      <workItem from="1591553576962" duration="283000" />
+      <workItem from="1591553889345" duration="27000" />
+      <workItem from="1591554057438" duration="158000" />
+      <workItem from="1591554331567" duration="15000" />
+      <workItem from="1591556932235" duration="8866000" />
+      <workItem from="1591606399297" duration="882000" />
+      <workItem from="1591607335708" duration="4493000" />
+      <workItem from="1591618208710" duration="3125000" />
     </task>
     <servers />
   </component>
@@ -165,30 +192,31 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="453" y="112" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1590524035636" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1591347194420">
+    <state width="1398" height="59" key="GridCell.Tab.0.bottom" timestamp="1591621421113">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1590940295917" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591347194420" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1591347194419">
+    <state width="1398" height="59" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591621421113" />
+    <state width="1398" height="59" key="GridCell.Tab.0.center" timestamp="1591621421110">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1590940295915" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591347194419" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1591347194418">
+    <state width="1398" height="59" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591621421110" />
+    <state width="1398" height="59" key="GridCell.Tab.0.left" timestamp="1591621421109">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1590940295914" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591347194418" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1591347194420">
+    <state width="1398" height="59" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591621421109" />
+    <state width="1398" height="59" key="GridCell.Tab.0.right" timestamp="1591621421111">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1238" height="96" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1590940295915" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591347194420" />
-    <state x="208" y="31" key="SettingsEditor" timestamp="1591297365561">
+    <state width="1398" height="59" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591621421111" />
+    <state x="208" y="31" key="SettingsEditor" timestamp="1591549321593">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591297365561" />
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591549321593" />
+    <state x="208" y="51" key="SettingsEditor/0.23.1440.826@0.23.1440.826" timestamp="1591549301739" />
     <state x="396" y="341" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1591297613545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

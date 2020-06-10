@@ -101,19 +101,18 @@ public class FashionMagazine extends Magazine {
         magazine.setHasPosters(getHasPosters());
         magazine.setNumberOfInterviews(getNumberOfInterviews());
 
-        PricePerPrintEdition pricePerPrintEdition = magazine.getPrintEditionPrice();
+        boolean checkDestination = false;
 
-        boolean flag = false;
         if((tombolaTicket && tombolaTicketDestination != null) || (tombolaTicket && tombolaTicketDestination != "")) {
             for (int i = 0; i < AVAILABLE_DESTINATIONS.length; i++) {
                 assert tombolaTicketDestination != null;
                 if (tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])) {
-                    flag = true;
+                    checkDestination = true;
                     break;
                 }
             }
 
-            if(!flag){
+            if(!checkDestination){
                 FashionMagazine fashionMagazine = new FashionMagazine
                         (getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews(),
                                 tombolaTicket, tombolaTicketDestination);

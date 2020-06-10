@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>bookStore</OriginalElement>
+  <nodes>
+    <node x="435.0" y="0.0">bookStore.PrintEdition</node>
+    <node x="273.0" y="301.0">bookStore.PricePerPrintEdition</node>
+    <node x="126.92500000000007" y="102.0">bookStore.Magazine</node>
+    <node x="0.0" y="204.0">bookStore.FashionMagazine</node>
+    <node x="583.9250000000001" y="102.0">bookStore.Newspaper</node>
+    <node x="19.925000000000068" y="102.0">bookStore.Comic</node>
+    <node x="356.0" y="204.0">bookStore.RetroPoster</node>
+    <node x="0.0" y="301.0">bookStore.PrintEditionInformation</node>
+    <node x="510.0" y="204.0">bookStore.ColorfulPoster</node>
+    <node x="468.92500000000007" y="102.0">bookStore.Poster</node>
+    <node x="186.00000000000003" y="204.0">bookStore.SportMagazine</node>
+    <node x="722.9250000000001" y="102.0">bookStore.Book</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="bookStore.Book" target="bookStore.PrintEdition">
+      <point x="0.0" y="-26.0" />
+      <point x="762.9250000000001" y="72.0" />
+      <point x="562.8000000000001" y="72.0" />
+      <point x="56.80000000000001" y="26.0" />
+    </edge>
+    <edge source="bookStore.Comic" target="bookStore.PrintEdition">
+      <point x="0.0" y="-26.0" />
+      <point x="63.42500000000007" y="72.0" />
+      <point x="449.20000000000005" y="72.0" />
+      <point x="-56.80000000000001" y="26.0" />
+    </edge>
+    <edge source="bookStore.RetroPoster" target="bookStore.Poster">
+      <point x="0.0" y="-26.0" />
+      <point x="423.0" y="179.0" />
+      <point x="492.67500000000007" y="179.0" />
+      <point x="-23.75" y="26.0" />
+    </edge>
+    <edge source="bookStore.FashionMagazine" target="bookStore.Magazine">
+      <point x="2.8421709430404007E-14" y="-26.0" />
+      <point x="83.0" y="179.0" />
+      <point x="154.67500000000007" y="179.0" />
+      <point x="-27.75" y="26.0" />
+    </edge>
+    <edge source="bookStore.SportMagazine" target="bookStore.Magazine">
+      <point x="0.0" y="-26.0" />
+      <point x="261.0" y="179.0" />
+      <point x="210.17500000000007" y="179.0" />
+      <point x="27.75" y="26.0" />
+    </edge>
+    <edge source="bookStore.Newspaper" target="bookStore.PrintEdition">
+      <point x="0.0" y="-26.0" />
+      <point x="643.4250000000001" y="82.0" />
+      <point x="534.4" y="82.0" />
+      <point x="28.399999999999977" y="26.0" />
+    </edge>
+    <edge source="bookStore.Poster" target="bookStore.PrintEdition">
+      <point x="0.0" y="-26.0" />
+      <point x="516.4250000000001" y="82.0" />
+      <point x="506.0" y="82.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="bookStore.Magazine" target="bookStore.PrintEdition">
+      <point x="0.0" y="-26.0" />
+      <point x="182.42500000000007" y="82.0" />
+      <point x="477.6" y="82.0" />
+      <point x="-28.399999999999977" y="26.0" />
+    </edge>
+    <edge source="bookStore.ColorfulPoster" target="bookStore.Poster">
+      <point x="0.0" y="-26.0" />
+      <point x="589.0" y="179.0" />
+      <point x="540.1750000000001" y="179.0" />
+      <point x="23.75" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="401.5" y="176.5" />
+  <SelectedNodes>
+    <node>bookStore.Book</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

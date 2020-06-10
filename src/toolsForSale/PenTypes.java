@@ -19,7 +19,7 @@ public enum PenTypes {
 
     /**
      * Constructor with parameters for enum PenTypes.
-     * @param type
+     * @param type This is the type of a Pen.
      */
     PenTypes(String type){
         this.type = type == null ? "MEDIUM" : type;
@@ -27,7 +27,7 @@ public enum PenTypes {
 
     /**
      * This method returns formatted string.
-     * @return String
+     * @return String This is a formatted string result.
      */
     @Override
     public String toString() {

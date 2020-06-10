@@ -18,7 +18,7 @@ public enum PenColors{
 
     /**
      * Constructor with parameters for enum PenColors.
-     * @param color
+     * @param color This is the color of a Pen.
      */
     PenColors(String color){
         this.color = color == null ? "BLACK" : color;
@@ -26,7 +26,7 @@ public enum PenColors{
 
     /**
      * This method returns formatted string.
-     * @return String
+     * @return String This is a formatted string result.
      */
     @Override
     public String toString() {

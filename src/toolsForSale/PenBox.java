@@ -24,14 +24,12 @@ public class PenBox {
 
         for(PenColors currentColor : PenColors.values()){
             for(PenTypes currentType : PenTypes.values()){
-
                 Pen currentPen = new Pen();
 
                 currentPen.setColor(currentColor);
                 currentPen.setType(currentType);
 
                 boxOfPens.add(currentPen);
-
             }
         }
     }
@@ -51,7 +49,8 @@ public class PenBox {
     public void createBox() {
         boxOfPens = new ArrayList<>();
         int i = 0;
-        while (i!=SELL_SIZE_BOX){
+
+        while (i != SELL_SIZE_BOX){
             Pen result = new Pen();
             result = result.takeRandomPen();
             boxOfPens.add(result);
@@ -78,7 +77,6 @@ public class PenBox {
                 Pen temporary = boxOfPens.get(i);
                 boxOfPens.set(i, boxOfPens.get(min));
                 boxOfPens.set(min, temporary);
-
             }
         }
     }
@@ -86,11 +84,10 @@ public class PenBox {
      * This method shows all offered Pens.
      */
     public void showOfferedPens() {
-        ArrayList<Pen> listOfPens = new ArrayList<>(INITIAL_CAPACITY);
-
         for(PenColors currentColor : PenColors.values()){
             for(PenTypes currentType : PenTypes.values()){
                 Pen currentPen = new Pen(currentColor, currentType);
+
                 System.out.println(currentPen.color);
                 System.out.println(currentPen.type);
             }

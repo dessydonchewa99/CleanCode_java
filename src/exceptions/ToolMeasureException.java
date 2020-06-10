@@ -1,5 +1,9 @@
 package exceptions;
-
+/**
+ * Represents a ToolMeasureException.
+ * @author Desislava Dontcheva
+ * @version 1.0
+ */
 import toolsForSale.*;
 
 import java.util.Scanner;
@@ -12,6 +16,11 @@ public class ToolMeasureException extends Exception {
         this("WRONG MEASURE");
     }
 
+    /**
+     * This method validates the measure of tool of ProtractorTool class.
+     * @param tool This is the tool of class ProtractorTool that should be validated.
+     * @param message This is the message that user should see if the program throws exceptions.
+     */
     public void protractorValidation(ProtractorTool tool, String message){
         if(tool.getToolMeasure() == GeometryToolMeasure.DEGREE || tool.getToolMeasure() == GeometryToolMeasure.RADIAN) {
             return;
@@ -39,6 +48,11 @@ public class ToolMeasureException extends Exception {
         }
     }
 
+    /**
+     * This method validates the measure of tool of RulerTool class.
+     * @param tool This is the tool of class RulerTool that should be validated.
+     * @param message This is the message that user should see if the program throws exceptions.
+     */
     public void rulerValidation(RulerTool tool, String message){
         if(tool.getToolMeasure() == GeometryToolMeasure.CENTIMETER || tool.getToolMeasure() == GeometryToolMeasure.INCH){
             return;
@@ -66,6 +80,11 @@ public class ToolMeasureException extends Exception {
         }
     }
 
+    /**
+     * This method validates the measure of tool of TriangleTool class.
+     * @param tool This is the tool of class TriangleTool that should be validated.
+     * @param message This is the message that user should see if the program throws exceptions.
+     */
     public void triangleValidation(TriangleTool tool, String message){
         if(tool.getToolMeasure() == GeometryToolMeasure.CENTIMETER || tool.getToolMeasure() == GeometryToolMeasure.INCH) {
             return;

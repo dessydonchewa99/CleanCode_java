@@ -67,7 +67,9 @@ public class Poster extends PrintEdition {
             if(sticky) {
                 return calculatePrintPrice() + PRICE_STICKY_POSTER;
             }
-            else return calculatePrintPrice();
+            else {
+                return calculatePrintPrice();
+            }
         }
     }
     /**

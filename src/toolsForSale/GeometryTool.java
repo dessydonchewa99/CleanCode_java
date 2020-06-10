@@ -5,6 +5,7 @@ package toolsForSale;
  * @version 1.0
  */
 public class GeometryTool {
+
     private GeometryToolMeasure toolMeasure;
 
     /**

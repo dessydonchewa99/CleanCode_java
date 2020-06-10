@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrintList<T extends PrintEdition> {
+
     private List<T> objects;
 
     /**

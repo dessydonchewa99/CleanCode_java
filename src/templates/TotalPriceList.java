@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TotalPriceList<T extends PrintEdition>{
+
     private List<T> objects;
 
     /**
@@ -35,10 +36,12 @@ public class TotalPriceList<T extends PrintEdition>{
      */
     public double total() {
         double price = 0.0;
+
         for(T object : objects){
             PricePerPrintEdition pricePerPrintEdition = object.getPrintEditionPrice();
             price = price + pricePerPrintEdition.calculatePricePerEdition();
         }
+
         return price;
     }
 }

@@ -163,6 +163,7 @@ public class SportMagazine extends Magazine {
             MagazineParameterException exception = new MagazineParameterException();
             exception.hatCodeValidation(sportMagazine, "MISSING CODE");
         }
+
         priceForHat = 0;
         return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
     }

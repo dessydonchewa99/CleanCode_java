@@ -162,6 +162,7 @@ public class Book extends PrintEdition {
      */
     public static List<Book> lookAllHardCovers(List<Book> bookList){
         List<Book> result = new ArrayList<>();
+
         for(Book book : bookList){
             if(book.getHasHardcovers()) {
                 result.add(book);

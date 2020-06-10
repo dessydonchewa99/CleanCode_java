@@ -5,6 +5,7 @@ package bookStore;
  * @version 1.0
  */
 public class ColorfulPoster extends Poster {
+
     public static final double PRICE_SHARP_COLORS = 5.55;
     public static final int CLIENT_NUMBER_DISCOUNT = 10;
     public static final int DISCOUNT = 2; //it means 50%

@@ -5,6 +5,7 @@ package toolsForSale;
  * @version 1.0
  */
 public enum GeometryToolMeasure {
+
     /**
      * Possible measure types of GeometryTool.
      */

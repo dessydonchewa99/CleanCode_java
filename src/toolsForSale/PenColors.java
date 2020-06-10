@@ -4,7 +4,7 @@ package toolsForSale;
  * @author Desislava Dontcheva
  * @version 1.0
  */
-enum PenColors{
+public enum PenColors{
 
     /**
      * Possible Pen colors.

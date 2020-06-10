@@ -1,5 +1,9 @@
 package exceptions;
-
+/**
+ * Represents a MagazineParameterException.
+ * @author Desislava Dontcheva
+ * @version 1.0
+ */
 import bookStore.FashionMagazine;
 import bookStore.SportMagazine;
 
@@ -13,9 +17,13 @@ public class MagazineParameterException extends Exception {
         this("WRONG CODE");
     }
 
+    /**
+     * This method validates the code of hat of class SportMagazine.
+     * @param sportMagazine This is the input object of class SportMagazine.
+     * @param message This is the message that user should see if the program throws exceptions.
+     */
     public void hatCodeValidation(SportMagazine sportMagazine, String message){
         Scanner scanner = new Scanner(System.in);
-        char[] typeHat = new char[1];
         while (true){
             if(sportMagazine.getCodeOfHat().charAt(0) == sportMagazine.getCodes(0)
                     || sportMagazine.getCodeOfHat().charAt(0) == sportMagazine.getCodes(1)){
@@ -32,6 +40,11 @@ public class MagazineParameterException extends Exception {
         }
     }
 
+    /**
+     * This method validates the destination of ticket of class FashionMagazine.
+     * @param fashionMagazine This is the input object of class FashionMagazine.
+     * @param message This is the message that user should see if the program throws exceptions.
+     */
     public void tombolaTicketValidation(FashionMagazine fashionMagazine, String message){
         Scanner scanner = new Scanner(System.in);
         boolean flag = false;

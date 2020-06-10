@@ -1,5 +1,9 @@
 package toolsForSale;
-
+/**
+ * Represents a PenBox.
+ * @author Desislava Dontcheva
+ * @version 1.0
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -9,6 +13,11 @@ public class PenBox {
 
     private ArrayList<Pen> boxOfPens;
 
+    /**
+     * Default constructor for class PenBox.
+     * It generates all combinations of Pen with
+     * color enum type and type enum type.
+     */
     public PenBox() {
 
         boxOfPens = new ArrayList<>();
@@ -21,17 +30,24 @@ public class PenBox {
                 currentPen.setColor(currentColor);
                 currentPen.setType(currentType);
 
-                // System.out.println("" + currentColor + currentType);
                 boxOfPens.add(currentPen);
 
             }
         }
     }
 
+    /**
+     * This method gets boxOfPens of class PenBox.
+     * @return Pen ArrayList
+     */
     public ArrayList<Pen> getBoxOfPens() {
         return boxOfPens;
     }
 
+    /**
+     * This method generates a box with fixed size
+     * full of random generated Pens.
+     */
     public void createBox() {
         boxOfPens = new ArrayList<>();
         int i = 0;
@@ -42,7 +58,9 @@ public class PenBox {
             i++;
         }
     }
-
+    /**
+     * This method sorts all Pen types.
+     */
     public void sortByType() {
         ArrayList<PenTypes> penTypesSorted = new ArrayList<PenTypes>(Arrays.asList(PenTypes.values()));
 
@@ -64,7 +82,9 @@ public class PenBox {
             }
         }
     }
-
+    /**
+     * This method shows all offered Pens.
+     */
     public void showOfferedPens() {
         ArrayList<Pen> listOfPens = new ArrayList<>(INITIAL_CAPACITY);
 

@@ -75,9 +75,9 @@ public class SortTest {
     }
     @Test
     public void sortByDate(){
-        Newspaper newspaper1 = new Newspaper(0.12, 20, 2, "Weekend", new Date(2222222222222222L), 2);
-        Newspaper newspaper2 = new Newspaper(0.16, 23, 5, "TODAY", new Date(8888888888888888L), 4);
-        Newspaper newspaper3 = new Newspaper(0.02, 40, 23, "24H", new Date(11111111111111111L), 3);
+        Newspaper newspaper1 = new Newspaper(0.12, 20, 2, "Weekend", new Date("June 13, 2020 11:30:00"), 2);
+        Newspaper newspaper2 = new Newspaper(0.16, 23, 5, "TODAY", new Date("May 21, 2020 10:00:00"), 4);
+        Newspaper newspaper3 = new Newspaper(0.02, 40, 23, "24H", new Date("June 01, 2020 12:00:00"), 3);
 
         List<Date> dateList = new ArrayList<>();
         dateList.add(newspaper1.getPrintDate());
@@ -86,6 +86,6 @@ public class SortTest {
 
         SortList<Date> sortList = new SortList<>(dateList);
 
-        Assert.assertEquals("[Fri Jun 02 17:37:02 EEST 72389, Wed Sep 04 13:28:08 EEST 283647, Fri Feb 04 03:05:11 EET 354067]", Arrays.toString(sortList.sort().toArray()));
+        Assert.assertEquals("[Thu May 21 10:00:00 EEST 2020, Mon Jun 01 12:00:00 EEST 2020, Sat Jun 13 11:30:00 EEST 2020]", Arrays.toString(sortList.sort().toArray()));
     }
 }

@@ -134,38 +134,30 @@ public class SportMagazine extends Magazine {
      * @see MagazineParameterException#hatCodeValidation(SportMagazine, String) 
      */
     public double calculatePriceWithHat(){
-        Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(),
-                getHasPosters(), getNumberOfInterviews());
+        Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                                         getName(), getHasPosters(), getNumberOfInterviews());
         PricePerPrintEdition pricePerPrintEdition = magazine.getPrintEditionPrice();
 
-        if((bonusHat && codeOfHat!=null) || (bonusHat && codeOfHat!="")){
-            char[] typeHat = new char[1];
-            typeHat[0] = codeOfHat.charAt(0);
+        assert codeOfHat != null;
 
-            if(typeHat[0] == CODES[0]){
-                priceForHat = FOOTBALL_HAT_PRICE;
-                return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
-            }else if(typeHat[0] == CODES[1]){
-                priceForHat = VOLLEYBALL_HAT_PRICE;
-                return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
-            }else {
-                SportMagazine sportMagazine =
-                        new SportMagazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews(),
-                                bonusHat, codeOfHat);
+        char[] typeHat = new char[1];
+        typeHat[0] = codeOfHat.charAt(0);
 
-                MagazineParameterException exception = new MagazineParameterException();
-                exception.hatCodeValidation(sportMagazine, "WRONG CODE");
-            }
-        }else if((bonusHat && codeOfHat == null) || (bonusHat && codeOfHat == "")){
-            SportMagazine sportMagazine =
-                    new SportMagazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews(),
-                            bonusHat, codeOfHat);
+        if(typeHat[0] == CODES[0]){
+            priceForHat = FOOTBALL_HAT_PRICE;
+            return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
+        } else if(typeHat[0] == CODES[1]){
+            priceForHat = VOLLEYBALL_HAT_PRICE;
+            return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
+        } else {
+            SportMagazine sportMagazine = new SportMagazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                                                            getName(), getHasPosters(), getNumberOfInterviews(),
+                                                            bonusHat, codeOfHat);
 
             MagazineParameterException exception = new MagazineParameterException();
-            exception.hatCodeValidation(sportMagazine, "MISSING CODE");
+            exception.hatCodeValidation(sportMagazine, "WRONG CODE");
         }
 
-        priceForHat = 0;
         return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
     }
 

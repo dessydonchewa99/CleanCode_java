@@ -125,14 +125,14 @@ public class ColorfulPoster extends Poster {
 
     /**
      * This method gets an instance of the private inner class ColorfulPosterPrice.
-     * @return new object of ColorfulPosterPrice class
+     * @return PricePerPrintEdition new object of ColorfulPosterPrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new ColorfulPosterPrice();
     }
     /**
      * This method gets an instance of the private inner class ColorfulPosterInformation.
-     * @return new object of ColorfulPosterInformation class
+     * @return PrintEditionInformation new object of ColorfulPosterInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new ColorfulPosterInformation();

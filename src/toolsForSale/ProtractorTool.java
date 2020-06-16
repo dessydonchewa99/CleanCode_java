@@ -21,6 +21,7 @@ public class ProtractorTool extends GeometryTool {
      * This method validates if the measure of ProtractorTool
      * is correct or not.
      * @param protractor Object of class ProtractorTool.
+     * @see ToolMeasureException#protractorValidation(ProtractorTool, String)
      */
     public void validationMeasure(ProtractorTool protractor){
         ToolMeasureException exception = new ToolMeasureException();

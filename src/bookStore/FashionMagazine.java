@@ -90,16 +90,11 @@ public class FashionMagazine extends Magazine {
      * This method searches if the input tombola ticket destination is in the
      * array of available destinations. If it's not, creates an object of
      * class MagazineParameterException.
+     * @see MagazineParameterException#tombolaTicketValidation(FashionMagazine, String)
      */
     public void searchTombolaTicket(){
-        Magazine magazine = new Magazine();
-
-        magazine.setPricePerPage(getPricePerPage());
-        magazine.setPricePerPage(getPages());
-        magazine.setIssueInThousands(getIssueInThousands());
-        magazine.setName(getName());
-        magazine.setHasPosters(getHasPosters());
-        magazine.setNumberOfInterviews(getNumberOfInterviews());
+        Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                                         getName(), getHasPosters(), getNumberOfInterviews());
 
         boolean checkDestination = false;
 
@@ -113,9 +108,9 @@ public class FashionMagazine extends Magazine {
             }
 
             if(!checkDestination){
-                FashionMagazine fashionMagazine = new FashionMagazine
-                        (getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews(),
-                                tombolaTicket, tombolaTicketDestination);
+                FashionMagazine fashionMagazine = new FashionMagazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                                                                      getName(), getHasPosters(), getNumberOfInterviews(),
+                                                                      tombolaTicket, tombolaTicketDestination);
                 MagazineParameterException exception = new MagazineParameterException();
                 exception.tombolaTicketValidation(fashionMagazine, "WRONG DESTINATION");
             }
@@ -195,14 +190,14 @@ public class FashionMagazine extends Magazine {
 
     /**
      * This method gets an instance of the private inner class FashionMagazinePrice.
-     * @return new object of FashionMagazinePrice class
+     * @return PrintEditionInformation new object of FashionMagazinePrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new FashionMagazinePrice();
     }
     /**
      * This method gets an instance of the private inner class FashionMagazineInformation.
-     * @return new object of FashionMagazineInformation class
+     * @return PrintEditionInformation new object of FashionMagazineInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new FashionMagazineInformation();

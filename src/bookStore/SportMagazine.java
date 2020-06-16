@@ -131,6 +131,7 @@ public class SportMagazine extends Magazine {
     /**
      * This method calculate the total price of the SportMagazine with hat.
      * @return double This is the total price of the SportMagazine with hat.
+     * @see MagazineParameterException#hatCodeValidation(SportMagazine, String) 
      */
     public double calculatePriceWithHat(){
         Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(),
@@ -207,14 +208,14 @@ public class SportMagazine extends Magazine {
 
     /**
      * This method gets an instance of the private inner class SportMagazinePrice.
-     * @return new object of SportMagazinePrice class
+     * @return PricePerPrintEdition new object of SportMagazinePrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new SportMagazinePrice();
     }
     /**
      * This method gets an instance of the private inner class SportMagazineInformation.
-     * @return new object of SportMagazineInformation class
+     * @return PrintEditionInformation new object of SportMagazineInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new SportMagazineInformation();

@@ -21,6 +21,7 @@ public class TriangleTool extends GeometryTool {
      * This method validates if the measure of TriangleTool
      * is correct or not.
      * @param triangle Object of class TriangleTool.
+     * @see ToolMeasureException#triangleValidation(TriangleTool, String) 
      */
     public void validationMeasure(TriangleTool triangle) {
         ToolMeasureException exception = new ToolMeasureException();

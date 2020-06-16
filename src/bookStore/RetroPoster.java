@@ -127,14 +127,14 @@ public class RetroPoster extends Poster {
 
     /**
      * This method gets an instance of the private inner class RetroPosterPrice.
-     * @return new object of RetroPosterPrice class
+     * @return PrintEditionInformation new object of RetroPosterPrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new RetroPosterPrice();
     }
     /**
      * This method gets an instance of the private inner class RetroPosterInformation.
-     * @return new object of RetroPosterInformation class
+     * @return PrintEditionInformation new object of RetroPosterInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new RetroPosterInformation();

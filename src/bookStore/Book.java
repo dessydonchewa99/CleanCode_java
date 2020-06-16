@@ -143,7 +143,7 @@ public class Book extends PrintEdition {
      * and search for this author name in the list.
      * @param bookList This is a Book list.
      * @param authorName This is the author name of the Book.
-     * @return boolean If the author name is equal to any of the list, returns true.
+     * @return boolean If the author name is equal to any name of the list, returns true.
      */
     public static boolean checkAuthor(List<Book> bookList, String authorName){
         for(Book book : bookList){
@@ -209,14 +209,14 @@ public class Book extends PrintEdition {
 
     /**
      * This method gets an instance of the private inner class BookPrice.
-     * @return new object of BookPrice class
+     * @return PricePerPrintEdition new object of BookPrice class
      */
     public PricePerPrintEdition getPrintEditionPrice(){
         return new BookPrice();
     }
     /**
      * This method gets an instance of the private inner class BookInformation.
-     * @return new object of BookInformation class
+     * @return PrintEditionInformation new object of BookInformation class
      */
     public PrintEditionInformation getPrintInformation(){
         return new BookInformation();

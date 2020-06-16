@@ -141,14 +141,14 @@ public class Comic extends PrintEdition {
     }
     /**
      * This method gets an instance of the private inner class ComicsPrice.
-     * @return new object of ComicsPrice class
+     * @return PricePerPrintEdition new object of ComicsPrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new ComicsPrice();
     }
     /**
      * This method gets an instance of the private inner class ComicsInformation.
-     * @return new object of ComicsInformation class
+     * @return PrintEditionInformation new object of ComicsInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new ComicsInformation();

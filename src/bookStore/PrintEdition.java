@@ -145,14 +145,14 @@ public class PrintEdition {
 
     /**
      * This method gets an instance of the private inner class PrintEditionPrice.
-     * @return new object of PrintEditionPrice class
+     * @return PricePerPrintEdition new object of PrintEditionPrice class
      */
    public PricePerPrintEdition getPrintEditionPrice(){
         return new PrintEditionPrice();
     }
     /**
      * This method gets an instance of the private inner class PrintInformation.
-     * @return new object of PrintInformation class
+     * @return PrintEditionInformation new object of PrintInformation class
      */
     public PrintEditionInformation getPrintInformation(){
         return new PrintInformation();

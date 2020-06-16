@@ -94,7 +94,7 @@ public class Newspaper extends PrintEdition{
 
     /**
      * This method searches for Newspaper after exact Date.
-     * The method returns a Newspaper list with Date after the given one.
+     * The method returns a Date list with Date after the given one.
      * @param newspapers This is the input parameter Newspaper list.
      * @param date This is the starting point Date.
      * @return Date list This is the output Newspaper list.
@@ -147,14 +147,14 @@ public class Newspaper extends PrintEdition{
 
     /**
      * This method gets an instance of the private inner class NewspaperPrice.
-     * @return new object of NewspaperPrice class
+     * @return PricePerPrintEdition new object of NewspaperPrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new NewspaperPrice();
     }
     /**
      * This method gets an instance of the private inner class NewspaperInformation.
-     * @return new object of NewspaperInformation class
+     * @return PrintEditionInformation new object of NewspaperInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new NewspaperInformation();

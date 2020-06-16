@@ -29,7 +29,7 @@ public class SortList<T extends Comparable<T>> {
 
     /**
      * This method sorts all Template type objects.
-     * @return objects This is the sorted list.
+     * @return Template list This is the sorted list.
      */
     public List<T> sort() {
         Collections.sort(objects);

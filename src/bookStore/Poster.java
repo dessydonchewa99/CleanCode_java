@@ -90,14 +90,14 @@ public class Poster extends PrintEdition {
 
     /**
      * This method gets an instance of the private inner class PosterPrice.
-     * @return new object of PosterPrice class
+     * @return PricePerPrintEdition new object of PosterPrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new PosterPrice();
     }
     /**
      * This method gets an instance of the private inner class PosterInformation.
-     * @return new object of PosterInformation class
+     * @return PrintEditionInformation new object of PosterInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new PosterInformation();

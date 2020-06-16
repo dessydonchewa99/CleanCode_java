@@ -149,14 +149,14 @@ public class Magazine extends PrintEdition {
 
     /**
      * This method gets an instance of the private inner class MagazinePrice.
-     * @return new object of MagazinePrice class
+     * @return PricePerPrintEdition new object of MagazinePrice class
      */
     public PricePerPrintEdition getPrintEditionPrice() {
         return new MagazinePrice();
     }
     /**
      * This method gets an instance of the private inner class MagazineInformation.
-     * @return new object of MagazineInformation class
+     * @return PrintEditionInformation new object of MagazineInformation class
      */
     public PrintEditionInformation getPrintInformation() {
         return new MagazineInformation();

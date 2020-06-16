@@ -257,5 +257,11 @@ public class PrintEditionTest {
         Assertions.assertNotNull(result);
 
     }
+    @Test
+    public void testPriceWithHat(){
+        SportMagazine sportMagazine1 = new SportMagazine(0.75, 24, 2, "SPORT news", true, 5, true, "F845");
 
+        double result = sportMagazine1.calculatePriceWithHat();
+        Assertions.assertEquals(33.5, result);
+    }
 }

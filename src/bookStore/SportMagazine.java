@@ -116,6 +116,7 @@ public class SportMagazine extends Magazine {
      */
     public static void printSortedCodes(List<SportMagazine> sportMagazines){
         List<String> codes = new ArrayList<>();
+
         for (SportMagazine sportMagazine : sportMagazines){
             if(sportMagazine.bonusHat) {
                 codes.add(sportMagazine.codeOfHat);
@@ -124,8 +125,8 @@ public class SportMagazine extends Magazine {
 
         java.util.Collections.sort(codes);
 
-        for(int i = 0; i < codes.size(); i++){
-            System.out.println(codes.get(i));
+        for (String code : codes) {
+            System.out.println(code);
         }
     }
     /**
@@ -175,7 +176,8 @@ public class SportMagazine extends Magazine {
             if(bonusHat) {
                 return calculatePriceWithHat();
             } else{
-                Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(), getName(), getHasPosters(), getNumberOfInterviews());
+                Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                                                 getName(), getHasPosters(), getNumberOfInterviews());
                 PricePerPrintEdition printPrice = magazine.getPrintEditionPrice();
                 return printPrice.calculatePricePerEdition();
             }

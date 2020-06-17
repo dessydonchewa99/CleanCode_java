@@ -90,31 +90,26 @@ public class FashionMagazine extends Magazine {
      * This method searches if the input tombola ticket destination is in the
      * array of available destinations. If it's not, creates an object of
      * class MagazineParameterException.
+     * @return boolean This is the result of if destination exists or not
      * @see MagazineParameterException#tombolaTicketValidation(FashionMagazine, String)
      */
-    public void searchTombolaTicket(){
-        Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(),
-                                         getName(), getHasPosters(), getNumberOfInterviews());
-
-        boolean checkDestination = false;
+    public boolean checkTombolaTicket(){
 
         if((tombolaTicket && tombolaTicketDestination != null) || (tombolaTicket && tombolaTicketDestination != "")) {
-            for (int i = 0; i < AVAILABLE_DESTINATIONS.length; i++) {
+            for (String availableDestination : AVAILABLE_DESTINATIONS) {
                 assert tombolaTicketDestination != null;
-                if (tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[i])) {
-                    checkDestination = true;
-                    break;
+                if (tombolaTicketDestination.equals(availableDestination)) {
+                    return true;
                 }
             }
 
-            if(!checkDestination){
-                FashionMagazine fashionMagazine = new FashionMagazine(getPricePerPage(), getPages(), getIssueInThousands(),
-                                                                      getName(), getHasPosters(), getNumberOfInterviews(),
-                                                                      tombolaTicket, tombolaTicketDestination);
-                MagazineParameterException exception = new MagazineParameterException();
-                exception.tombolaTicketValidation(fashionMagazine, "WRONG DESTINATION");
-            }
+            FashionMagazine fashionMagazine = new FashionMagazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                                                                  getName(), getHasPosters(), getNumberOfInterviews(),
+                                                                  tombolaTicket, tombolaTicketDestination);
+            MagazineParameterException exception = new MagazineParameterException();
+            return exception.tombolaTicketValidation(fashionMagazine, "WRONG DESTINATION");
         }
+        else return false;
     }
 
     /**

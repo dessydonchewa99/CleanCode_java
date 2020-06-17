@@ -67,7 +67,9 @@ public class FashionMagazine extends Magazine {
      * @param tombolaTicketDestination This is the destination of the tombola ticket of the FashionMagazine.
      */
     public void setTombolaTicketDestination(String tombolaTicketDestination) {
-        this.tombolaTicketDestination = tombolaTicketDestination == null ? AVAILABLE_DESTINATIONS[0] : tombolaTicketDestination;
+        if(tombolaTicket) {
+            this.tombolaTicketDestination = tombolaTicketDestination == null ? AVAILABLE_DESTINATIONS[0] : tombolaTicketDestination;
+        }
     }
 
     /**
@@ -118,28 +120,25 @@ public class FashionMagazine extends Magazine {
      * @return double[] This is the result array with percents by destination.
      */
     public static double[] ratioDestinations(List<FashionMagazine> fashionMagazines){
-        int[] countDestinations = new int[AVAILABLE_DESTINATIONS.length];
+        int[] destinationsByNumber = new int[AVAILABLE_DESTINATIONS.length];
+        int totalCount = 0;
 
         for(FashionMagazine fashionMagazine : fashionMagazines){
             if(fashionMagazine.tombolaTicket){
                 for (int j = 0; j < AVAILABLE_DESTINATIONS.length; j++) {
                     if(fashionMagazine.tombolaTicketDestination.equals(AVAILABLE_DESTINATIONS[j])){
-                        int count = countDestinations[j];
-                        countDestinations[j] = count + 1;
+                        int currentCount = destinationsByNumber[j];
+                        destinationsByNumber[j] = currentCount + 1;
+                        totalCount++;
                     }
 
                 }
             }
         }
 
-        int all = 0;
-        for (int countDestination : countDestinations) {
-            all = all + countDestination;
-        }
-
-        double[] ratio = new double[countDestinations.length];
-        for (int i = 0; i < countDestinations.length; i++){
-            ratio[i] = countDestinations[i]/(double)all * 100;
+        double[] ratio = new double[destinationsByNumber.length];
+        for (int i = 0; i < destinationsByNumber.length; i++){
+            ratio[i] = destinationsByNumber[i]/(double)totalCount * 100;
         }
 
         return ratio;

@@ -18,7 +18,7 @@ public enum GeometryToolMeasure {
 
     /**
      * Constructor with parameters for enum GeometryToolMeasure.
-     * @param measure
+     * @param measure This is the measure of a Geometry tool.
      */
     GeometryToolMeasure(String measure){
         this.measure = measure == null ? "INCH" : measure;
@@ -26,7 +26,7 @@ public enum GeometryToolMeasure {
 
     /**
      * This method returns formatted string.
-     * @return String
+     * @return String This is a formatted string result.
      */
     @Override
     public String toString() {

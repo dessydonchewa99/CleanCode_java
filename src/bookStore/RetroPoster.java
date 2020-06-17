@@ -64,8 +64,7 @@ public class RetroPoster extends Poster {
      * @return double This is the calculated ratio.
      */
     public static double calculateRatio(List<RetroPoster> retroPosters){
-        int countSpecial = 0;
-        int countNotSpecial = 0;
+        int countSpecial = 0, countNotSpecial = 0;
 
         if(retroPosters != null) {
             for(RetroPoster retroPoster : retroPosters){

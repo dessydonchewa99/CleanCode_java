@@ -9,7 +9,6 @@ import java.util.Arrays;
 
 public class PenBox {
     public final static int SELL_SIZE_BOX = 100;
-    public final static int INITIAL_CAPACITY = 20;
 
     private ArrayList<Pen> boxOfPens;
 

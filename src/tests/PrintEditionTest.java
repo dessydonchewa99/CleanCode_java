@@ -36,12 +36,12 @@ public class PrintEditionTest {
     }
     @Test
     public void testLookHardCovers(){
-        List<Book> bookList = new ArrayList<>();
         Book book1 = new Book(0.50, 40, 2, "Little Red Riding Hood", "Charles Perrault", 2008, true);
         Book book2 = new Book(0.34, 100, 4, "Little Fires Everywhere: A Novel", "Celeste Ng", 2019, false);
         Book book3 = new Book(0.17, 50, 5, "Brown Bear, Brown Bear, What Do You See?", "Bill Martin Jr.", 1996, false);
         Book book4 = new Book(1.23, 100, 2, "Midnight Sun", "Stephenie Meyer", 2010, true);
 
+        List<Book> bookList = new ArrayList<>();
         bookList.add(book1);
         bookList.add(book2);
         bookList.add(book3);
@@ -66,12 +66,12 @@ public class PrintEditionTest {
 
     @Test
     public void testSearchByCriteria(){
-        List<Comic> comicList = new ArrayList<>();
         Comic comic1 = new Comic(0.25, 10, 7, "Heroes", true, true);
         Comic comic2 = new Comic(0.15, 15, 17, "Animals", false, true);
         Comic comic3 = new Comic(0.29, 17, 27, "Stars", true, false);
         Comic comic4 = new Comic(0.12, 8, 1, "Where is the hero?", false, true);
 
+        List<Comic> comicList = new ArrayList<>();
         comicList.add(comic1);
         comicList.add(comic2);
         comicList.add(comic3);
@@ -263,5 +263,12 @@ public class PrintEditionTest {
 
         double result = sportMagazine1.calculatePriceWithHat();
         Assertions.assertEquals(33.5, result);
+    }
+    @Test
+    public void testCheckTombolaTicket(){
+        FashionMagazine fashionMagazine1 = new FashionMagazine(0.06, 48, 4, "WOMEN", true, 5, true, "UK");
+
+        boolean result = fashionMagazine1.checkTombolaTicket();
+        Assertions.assertTrue(result);
     }
 }

@@ -44,18 +44,20 @@ public class MagazineParameterException extends Exception {
      * This method validates the destination of ticket of class FashionMagazine.
      * @param fashionMagazine This is the input object of class FashionMagazine.
      * @param message This is the message that user should see if the program throws exceptions.
+     * @return boolean This is the result if the validation of the ticket is successful.
      */
-    public void tombolaTicketValidation(FashionMagazine fashionMagazine, String message){
+    public boolean tombolaTicketValidation(FashionMagazine fashionMagazine, String message){
         Scanner scanner = new Scanner(System.in);
-        boolean flag = false;
+        boolean found = false;
+
         while (true){
             for (int i = 0; i < FashionMagazine.AVAILABLE_DESTINATIONS.length; i++) {
                 if (fashionMagazine.getTombolaTicketDestination().equals(FashionMagazine.AVAILABLE_DESTINATIONS[i])) {
-                    flag = true;
+                    found = true;
                     break;
                 }
             }
-            if(flag) break;
+            if(found) break;
             else {
                 try {
                     throw new MagazineParameterException(message);
@@ -65,6 +67,8 @@ public class MagazineParameterException extends Exception {
             }
             fashionMagazine.setTombolaTicketDestination(scanner.next());
         }
+
+        return true;
     }
 }
 

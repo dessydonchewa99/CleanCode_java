@@ -132,7 +132,6 @@ public class SportMagazine extends Magazine {
     /**
      * This method calculate the total price of the SportMagazine with hat.
      * @return double This is the total price of the SportMagazine with hat.
-     * @see MagazineParameterException#hatCodeValidation(SportMagazine, String) 
      */
     public double calculatePriceWithHat(){
         Magazine magazine = new Magazine(getPricePerPage(), getPages(), getIssueInThousands(),
@@ -151,14 +150,31 @@ public class SportMagazine extends Magazine {
             priceForHat = VOLLEYBALL_HAT_PRICE;
             return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
         } else {
-            SportMagazine sportMagazine = new SportMagazine(getPricePerPage(), getPages(), getIssueInThousands(),
-                                                            getName(), getHasPosters(), getNumberOfInterviews(),
-                                                            bonusHat, codeOfHat);
-            MagazineParameterException exception = new MagazineParameterException();
-            exception.hatCodeValidation(sportMagazine, "WRONG CODE");
+            doValidation();
         }
 
         return pricePerPrintEdition.calculatePricePerEdition() + priceForHat;
+    }
+    /**
+     * This method validates the code of hat of a SportMagazine.
+     * This method is used when the code of hat is not suitable with any of constant array CODES.
+     * @see MagazineParameterException#hatCodeValidation(SportMagazine, String)
+     */
+    private void doValidation(){
+        SportMagazine sportMagazine = new SportMagazine(getPricePerPage(), getPages(), getIssueInThousands(),
+                getName(), getHasPosters(), getNumberOfInterviews(),
+                bonusHat, codeOfHat);
+        MagazineParameterException exception = new MagazineParameterException();
+        exception.hatCodeValidation(sportMagazine, "WRONG CODE");
+
+        char typeHat;
+        typeHat = codeOfHat.charAt(0);
+
+        if(typeHat == CODES[0]){
+            priceForHat = FOOTBALL_HAT_PRICE;
+        }else {
+            priceForHat = VOLLEYBALL_HAT_PRICE;
+        }
     }
 
     /**

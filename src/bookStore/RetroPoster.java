@@ -74,6 +74,8 @@ public class RetroPoster extends Poster {
                     countNotSpecial++;
                 }
             }
+        } else {
+            assert false;
         }
 
         if (countSpecial == 0 || countNotSpecial == 0) {
